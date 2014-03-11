@@ -1,0 +1,26 @@
+job "endToEnd" do |j|
+  j.description = "DESCRIPTION"
+  j.node = "NODE"
+  j.block_upstream = true
+  j.block_downstream = false
+  j.quiet_period = 42
+
+  j.axes << slave(:arch, %w{i386 amd64})
+
+  j.scm << git(url: "URL", branches: %w{master dev}, wipe_workspace: false)
+
+  j.triggers << pollscm("INTERVAL")
+
+  j.wrappers << timeout(type: 'elastic', elastic_percentage: 150, elastic_default_timeout: 5, fail: true)
+  j.wrappers << timestamps
+
+  j.builders << shell("COMMAND")
+
+  j.publishers << archive(artifacts: "ARTIFACTS", latest_only: true, allow_empty: true)
+  j.publishers << cppcheck(pattern: "PATTERN")
+  j.publishers << email_ext(recipients: %w{fred barney})
+  j.publishers << ircbot(notify_start: true)
+  j.publishers << junit(results: "RESULTS", keep_long_stdio: false)
+  j.publishers << trigger(project: "PROJECT")
+  j.publishers << xunit(types: [unittest(pattern: "PATTERN", deleteoutput: false)])
+end

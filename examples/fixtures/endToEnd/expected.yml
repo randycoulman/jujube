@@ -1,0 +1,57 @@
+---
+- job:
+    name: endToEnd
+    description: DESCRIPTION
+    node: NODE
+    block-upstream: true
+    block-downstream: false
+    quiet-period: 42
+    project-type: matrix
+    axes:
+      - axis:
+          type: slave
+          name: arch
+          values:
+            - i386
+            - amd64
+    scm:
+      - git:
+          url: URL
+          branches:
+            - master
+            - dev
+          wipe-workspace: false
+    triggers:
+      - pollscm: INTERVAL
+    wrappers:
+      - timeout:
+          type: elastic
+          elastic-percentage: 150
+          elastic-default-timeout: 5
+          fail: true
+      - timestamps
+    builders:
+      - shell: COMMAND
+    publishers:
+      - archive:
+          artifacts: ARTIFACTS
+          latest-only: true
+          allow-empty: true
+      - cppcheck:
+          pattern: PATTERN
+      - email-ext:
+          recipients:
+            - fred
+            - barney
+      - ircbot:
+          notify-start: true
+      - junit:
+          results: RESULTS
+          keep-long-stdio: false
+      - trigger:
+          project: PROJECT
+      - xunit:
+          types:
+            - unittest:
+                pattern: PATTERN
+                deleteoutput: false

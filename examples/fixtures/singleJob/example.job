@@ -1,0 +1,3 @@
+job "example" do |j|
+  j.description = "DESCRIPTION"
+end

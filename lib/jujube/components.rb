@@ -1,0 +1,7 @@
+require_relative "components/module"
+require_relative "components/parameters"
+require_relative "components/scms"
+require_relative "components/triggers"
+require_relative "components/wrappers"
+require_relative "components/builders"
+require_relative "components/publishers"
