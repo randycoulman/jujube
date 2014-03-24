@@ -90,7 +90,7 @@ end
 The following job attributes are supported:
 
 * `description`
-* `project_type` -- doesn't normally need to be specified.  If an `axis` is added to the
+* `project_type` -- doesn't normally need to be specified.  If any `axes` are added to the
   job, then `project_type` is automatically inferred to be `matrix`
 * `description`
 * `node`
