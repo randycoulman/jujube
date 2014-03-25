@@ -23,6 +23,29 @@
           wipe-workspace: false
     triggers:
       - pollscm: INTERVAL
+      - pollurl:
+          cron: CRON
+          polling-node: NODE
+          urls:
+            - url: URL
+              proxy: false
+              timeout: 442
+              username: USERNAME
+              password: PASSWORD
+              check-status: 202
+              check-etag: false
+              check-date: true
+              check-content:
+                - simple: true
+                - json:
+                  - JSON_PATH1
+                  - JSON_PATH2
+                - xml:
+                  - XPATH1
+                  - XPATH2
+                - text:
+                  - REGEX1
+                  - REGEX2
     wrappers:
       - timeout:
           type: elastic

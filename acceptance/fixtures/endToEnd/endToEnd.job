@@ -10,6 +10,21 @@ job "endToEnd" do |j|
   j.scm << git(url: "URL", branches: %w{master dev}, wipe_workspace: false)
 
   j.triggers << pollscm("INTERVAL")
+  j.triggers << pollurl(cron: "CRON", polling_node: "NODE") do |urls|
+    urls << url("URL",
+                proxy: false,
+                timeout: 442,
+                username: "USERNAME",
+                password: "PASSWORD",
+                check_status: 202,
+                check_etag: false,
+                check_date: true) do |content|
+      content << simple
+      content << json("JSON_PATH1", "JSON_PATH2")
+      content << xml("XPATH1", "XPATH2")
+      content << text("REGEX1", "REGEX2")
+    end
+  end
 
   j.wrappers << timeout(type: 'elastic', elastic_percentage: 150, elastic_default_timeout: 5, fail: true)
   j.wrappers << timestamps

@@ -13,8 +13,7 @@ module Jujube
     def to_config(key, options)
       return key if options.empty?
 
-      config = Hash[options.map { |k, v| [Jujube::Utils.canonicalize(k), v] }]
-      {key => config}
+      {key => canonicalize_options(options)}
     end
   end
 end

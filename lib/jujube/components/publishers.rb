@@ -4,8 +4,9 @@ module Jujube
 
     def xunit(options = {})
       types = []
-      yield types if block_given?
-      to_config("xunit", options.merge({types: types}))
+      yield(types) if block_given?
+      options.merge!(types: types) unless types.empty?
+      to_config("xunit", options)
     end
 
     standard_component :unittest
