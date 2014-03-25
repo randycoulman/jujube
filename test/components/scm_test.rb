@@ -1,6 +1,6 @@
 require_relative "../test_helper"
 
-class ScmsTest < Minitest::Test
+class ScmTest < Minitest::Test
   include Jujube::Components
 
   def test_git
