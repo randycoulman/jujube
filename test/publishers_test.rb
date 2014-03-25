@@ -38,7 +38,7 @@ class PublishersTest < Minitest::Test
                          [{"unittest" => {"pattern" => "PATTERN", "deleteoutput" => false}}]
                     }
     }
-    assert_equal(expected, xunit(types: [unittest(pattern: "PATTERN", deleteoutput: false)]))
+    assert_equal(expected, xunit {|types| types << unittest(pattern: "PATTERN", deleteoutput: false)})
   end
 
   def test_trigger
