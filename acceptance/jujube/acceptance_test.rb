@@ -3,7 +3,7 @@ require "open3"
 require "pathname"
 require "tmpdir"
 
-class Example < Minitest::Test
+class AcceptanceTest < Minitest::Test
   def with_fixture(fixture_name)
     fixture = fixture_root.join(fixture_name)
     Dir.mktmpdir do |temp_directory|
@@ -34,14 +34,14 @@ class Example < Minitest::Test
   end
 
   def fixture_root
-    example_root.join("fixtures")
+    acceptance_root.join("fixtures")
   end
 
   def bin_directory
-    example_root.join("..", "bin")
+    acceptance_root.join("..", "bin")
   end
 
-  def example_root
+  def acceptance_root
     Pathname.new(__FILE__).dirname.join("..").expand_path
   end
 end

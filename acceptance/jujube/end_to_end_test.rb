@@ -1,8 +1,8 @@
-require_relative "example.rb"
+require_relative "acceptance_test.rb"
 require "minitest/autorun"
 require "yaml"
 
-class UsageExample < Example
+class EndToEndTest < AcceptanceTest
   def test_end_to_end
     with_fixture("endToEnd") do
       run_jujube("endToEnd.job")

@@ -1,11 +1,11 @@
-require_relative "example.rb"
+require_relative "acceptance_test.rb"
 require "minitest/autorun"
 
-class UsageExample < Example
+class UsageTest < AcceptanceTest
 
   def test_generates_single_job
     with_fixture("singleJob") do
-      run_jujube("example.job")
+      run_jujube("test.job")
       assert_exits_cleanly
       assert_file_exists("jobs.yml")
 
@@ -22,7 +22,7 @@ EOF
 
   def test_generates_multiple_jobs_from_single_file
     with_fixture("multipleJobs") do
-      run_jujube("example.job")
+      run_jujube("test.job")
       assert_exits_cleanly
       assert_file_exists("jobs.yml")
       assert_job_created("job1")
@@ -82,7 +82,7 @@ EOF
 
   def test_places_output_in_specified_output_file
     with_fixture("singleJob") do
-      run_jujube("example.job", "-o", "output/my_jobs.yml")
+      run_jujube("test.job", "-o", "output/my_jobs.yml")
       assert_exits_cleanly
       assert_directory_exists("output")
       assert_file_exists("output/my_jobs.yml")

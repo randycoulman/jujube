@@ -6,7 +6,7 @@ Rake::TestTask.new(:test) do |t|
 end
 
 Rake::TestTask.new(:acceptance) do |t|
-  t.pattern = "acceptance/**/*_example.rb"
+  t.pattern = "test/**/*_test.rb"
 end
 
 task :default => [:test, :acceptance]

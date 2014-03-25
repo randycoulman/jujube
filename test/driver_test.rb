@@ -17,8 +17,8 @@ class DriverTest < Minitest::Test
   end
 
   def test_loads_single_file
-    @driver.run(%w{example.job})
-    assert_spy_called(@loader, :load_jobs, Pathname.new("example.job"))
+    @driver.run(%w{test.job})
+    assert_spy_called(@loader, :load_jobs, Pathname.new("test.job"))
   end
 
   def test_loads_multiple_files
