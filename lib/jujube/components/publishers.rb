@@ -9,6 +9,6 @@ module Jujube
       to_config("xunit", options)
     end
 
-    standard_component :unittest
+    named_config :unittest
   end
 end

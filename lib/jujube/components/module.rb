@@ -2,12 +2,16 @@ module Jujube
   module Components
     include Jujube::Utils
 
-    def self.standard_component(*names)
-      names.each do |name|
+    def self.named_config(*names)
+    names.each do |name|
         define_method(name) do |options = {}|
           to_config(canonicalize(name), options)
         end
       end
+    end
+
+    class << self
+      alias_method :standard_component, :named_config
     end
 
     def to_config(key, options)
