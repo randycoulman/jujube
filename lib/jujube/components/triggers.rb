@@ -5,19 +5,13 @@ module Jujube
       {'pollscm' => interval}
     end
 
-    def pollurl(options = {})
-      urls = []
-      yield(urls) if block_given?
-      options.merge!(urls: urls) unless urls.empty?
-      to_config("pollurl", options)
+    def pollurl(options = {}, &block)
+      to_config("pollurl", nested_options(:urls, options, &block))
     end
 
-    def url(the_url, options = {})
+    def url(the_url, options = {}, &block)
       options = {url: the_url}.merge!(options)
-      content = []
-      yield(content) if block_given?
-      options.merge!(check_content: content) unless content.empty?
-      canonicalize_options(options)
+      canonicalize_options(nested_options(:check_content, options, &block))
     end
 
     def simple
