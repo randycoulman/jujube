@@ -1,5 +1,7 @@
 # Jujube
 
+[![Code Climate](https://codeclimate.com/github/randycoulman/jujube.png)](https://codeclimate.com/github/randycoulman/jujube)
+
 **Jujube** is a Ruby front-end for
 [jenkins-job-builder](https://github.com/openstack-infra/jenkins-job-builder).
 
