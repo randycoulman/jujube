@@ -8,15 +8,8 @@ class UsageTest < AcceptanceTest
       run_jujube("test.job")
       assert_exits_cleanly
       assert_file_exists("jobs.yml")
-
-      expected = <<EOF
----
-- job:
-    name: example
-    description: DESCRIPTION
-EOF
-
-      assert_equal(expected, File.read("jobs.yml"))
+      assert_job_created("example")
+      assert_match(/^\s*description: DESCRIPTION\s*$/m, File.read("jobs.yml"))
     end
   end
 
@@ -92,6 +85,6 @@ EOF
   private
 
   def assert_job_created(job, output_file = "jobs.yml")
-    assert_match(/^- job:\n    name: #{job}$/m, File.read(output_file))
+    assert_match(/^- job:\s*\n    name: #{job}$/m, File.read(output_file))
   end
 end
