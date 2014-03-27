@@ -16,6 +16,7 @@ module Jujube
     end
 
     def run(argv = ARGV)
+      argv = adjusted_for_jruby(argv)
       options = handle_options(argv)
       jobs = @loader.load_jobs(*options.paths || Pathname.getwd)
       @generator.generate(jobs, options.output || Pathname.new("jobs.yml"))
@@ -42,6 +43,16 @@ module Jujube
       options.paths = argv.map { |file| Pathname.new(file) } unless argv.empty?
 
       options
+    end
+
+    def adjusted_for_jruby(argv)
+      # When running the acceptance tests under JRuby, an extra '{}' argument
+      # is passed in ARGV.  We remove it here so that it doesn't affect the
+      # rest of the program logic.
+      #
+      # See https://github.com/jruby/jruby/issues/1290
+      argv.pop if argv.last == "{}"
+      argv
     end
   end
 end
