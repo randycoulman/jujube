@@ -1,11 +1,12 @@
 module Jujube
   module Components
 
-    # @!group SCM
+    # Helper methods for creating SCM components.
+    module Scm
+      extend Macros
 
-  standard_component :git
+      standard_component :git
 
-    # @!endgroup
-
+    end
   end
 end
