@@ -1,5 +1,11 @@
 module Jujube
   module Components
-    standard_component :git
+
+    # @!group SCM
+
+  standard_component :git
+
+    # @!endgroup
+
   end
 end
