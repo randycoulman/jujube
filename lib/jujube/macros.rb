@@ -4,34 +4,30 @@ module Jujube
   module Macros
     include Jujube::Utils
 
-    # A macro that generates methods that define an attribute of a job.
-    # For each attribute, it generates a reader and a writer.
+    # A macro that defines an attribute of a job.
+    # It generates a reader and a writer for the attribute.
     #
-    # @param attribute_names [Array<Symbol>] The names of the attributes.
-    def attribute(*attribute_names)
-      attribute_names.each do |attribute_name|
-        canonical_name = canonicalize(attribute_name)
+    # @param attribute_name [Symbol] The name of the attribute.
+    def attribute(attribute_name)
+      canonical_name = canonicalize(attribute_name)
 
-        define_method attribute_name do
-          config[canonical_name]
-        end
+      define_method attribute_name do
+        config[canonical_name]
+      end
 
-        define_method "#{attribute_name}=".to_sym do |value|
-          config[canonical_name] = value
-        end
+      define_method "#{attribute_name}=".to_sym do |value|
+        config[canonical_name] = value
       end
     end
 
-    # A macro that generates methods that define a section of a job.
-    # For each section, it generates a method that returns the `Array`
-    # of components in that section.
+    # A macro that defines a section of a job.
+    # It generates a method that returns the `Array` of components
+    # in that section.
     #
-    # @param section_names [Array<Symbol>] The names of the sections.
-    def section(*section_names)
-      section_names.each do |section_name|
-        define_method section_name do
-          config[section_name.to_s] ||= []
-        end
+    # @param section_name [Symbol] The name of the section.
+    def section(section_name)
+      define_method section_name do
+        config[section_name.to_s] ||= []
       end
     end
   end
