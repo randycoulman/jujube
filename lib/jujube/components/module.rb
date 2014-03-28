@@ -2,6 +2,8 @@ module Jujube
   module Components
     include Jujube::Utils
 
+    private
+
     def self.named_config(*names)
     names.each do |name|
         define_method(name) do |options = {}|
