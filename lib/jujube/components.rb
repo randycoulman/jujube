@@ -6,6 +6,7 @@ require_relative "components/triggers"
 require_relative "components/wrappers"
 require_relative "components/builders"
 require_relative "components/publishers"
+require_relative "components/notifications"
 
 module Jujube
   # Helper methods for creating jenkins-job-builder components.
@@ -17,5 +18,6 @@ module Jujube
     include Wrappers
     include Builders
     include Publishers
+    include Notifications
   end
 end
