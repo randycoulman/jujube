@@ -179,3 +179,8 @@ tackle it, contact me and I'll be happy to help.
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+## Acknowledgements
+
+Thanks to Jason Roelofs, Chris Gaffney, and Sarah Mei for their input and feedback as I worked
+on this project.
