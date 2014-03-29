@@ -1,5 +1,6 @@
 # Jujube
 
+[![Gem Version](https://badge.fury.io/rb/jujube.png)](http://badge.fury.io/rb/jujube)
 [![Build Status](https://travis-ci.org/randycoulman/jujube.svg?branch=master)](https://travis-ci.org/randycoulman/jujube)
 [![Code Climate](https://codeclimate.com/github/randycoulman/jujube.png)](https://codeclimate.com/github/randycoulman/jujube)
 
