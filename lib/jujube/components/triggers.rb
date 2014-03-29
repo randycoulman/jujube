@@ -4,16 +4,17 @@ module Jujube
     # Helper methods for creating trigger components.
     module Triggers
 
-      # Define a `pollscm` trigger for a job.
+      # Specify a `pollscm` trigger for a job.
       #
       # See {http://ci.openstack.org/jenkins-job-builder/triggers.html#triggers.pollscm}.
       #
       # @param interval [String] The polling interval, using `cron` syntax.
+      # @return [Hash] The specification for the component.
       def pollscm(interval)
         {'pollscm' => interval}
       end
 
-      # Define a `pollurl` trigger for a job.
+      # Specify a `pollurl` trigger for a job.
       #
       # This trigger requires support in jenkins-job-builder that has not yet been merged.
       # See {https://review.openstack.org/#/c/83524/} for the patch.
@@ -33,6 +34,7 @@ module Jujube
       # @param options [Hash] Top-level options for configuring the component.
       # @yieldparam urls [Array] An array to which nested URL specifications should be
       #   added by the block.
+      # @return [Hash] The specification for the component.
       def pollurl(options = {}, &block)
         to_config("pollurl", nested_options(:urls, options, &block))
       end
@@ -49,6 +51,7 @@ module Jujube
       # @param options [Hash] Top-level options for this URL.
       # @yieldparam content_types [Array] An array to which nested content-type
       #   specifications should be added by the block.
+      # @return [Hash] The specification for the URL.
       def url(the_url, options = {}, &block)
         options = {url: the_url}.merge!(options)
         canonicalize_options(nested_options(:check_content, options, &block))
@@ -60,6 +63,7 @@ module Jujube
 
       # Configure a simple content check inside a {#url} specification of a
       # {#pollurl} component.
+      # @return [Hash] The specification for the content type.
       def simple
         {"simple" => true}
       end
@@ -69,6 +73,7 @@ module Jujube
       #
       # @param paths [String...] Zero or more JSONPath expressions.  Only changes to
       #   the parts of the JSON response that match one of the `paths` will trigger a build.
+      # @return [Hash] The specification for the content type.
       def json(*paths)
         {"json" => paths}
       end
@@ -78,6 +83,7 @@ module Jujube
       #
       # @param xpaths [String...] Zero or more XPath expressions.  Only changes to
       #   the parts of the XML response that match one of the `xpaths` will trigger a build.
+      # @return [Hash] The specification for the content type.
       def xml(*xpaths)
         {"xml" => xpaths}
       end
@@ -87,6 +93,7 @@ module Jujube
       #
       # @param regexes [String...] Zero or more regular expressions.  Only changes to
       #   the parts of the text response that match one of the `regexes` will trigger a build.
+      # @return [Hash] The specification for the content type.
       def text(*regexes)
         {"text" => regexes}
       end

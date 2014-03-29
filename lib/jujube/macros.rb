@@ -1,4 +1,5 @@
 module Jujube
+
   # Macros for defining methods that make it easier to specify the parts
   # a job.
   module Macros

@@ -5,9 +5,61 @@ module Jujube
     module Publishers
       extend Macros
 
-      standard_component :archive, :cppcheck, :email_ext, :ircbot, :junit, :trigger
+      # @!method archive(options = {})
+      # Specify an `archive` component for a job.
+      #
+      # See {http://ci.openstack.org/jenkins-job-builder/publishers.html#publishers.archive}.
+      #
+      # @param options [Hash] The configuration options for the component.
+      # @return [Hash] The specification for the component.
+      standard_component :archive
 
-      # Define an `xunit` component for a job.
+      # @!method cppcheck(options = {})
+      # Specify a `cppcheck` component for a job.
+      #
+      # See {http://ci.openstack.org/jenkins-job-builder/publishers.html#publishers.cppcheck}.
+      #
+      # @param options [Hash] The configuration options for the component.
+      # @return [Hash] The specification for the component.
+      standard_component :cppcheck
+
+      # @!method email_ext(options = {})
+      # Specify an `email-ext` component for a job.
+      #
+      # See {http://ci.openstack.org/jenkins-job-builder/publishers.html#publishers.email-ext}.
+      #
+      # @param options [Hash] The configuration options for the component.
+      # @return [Hash] The specification for the component.
+      standard_component :email_ext
+
+      # @!method ircbot(options = {})
+      # Specify an `ircbot` component for a job.
+      #
+      # See {http://ci.openstack.org/jenkins-job-builder/publishers.html#publishers.ircbot}.
+      #
+      # @param options [Hash] The configuration options for the component.
+      # @return [Hash] The specification for the component.
+      standard_component :ircbot
+
+      # @!method junit(options = {})
+      # Specify a `junit` component for a job.
+      #
+      # See {http://ci.openstack.org/jenkins-job-builder/publishers.html#publishers.junit}.
+      #
+      # @param options [Hash] The configuration options for the component.
+      # @return [Hash] The specification for the component.
+      standard_component :junit
+
+      # @!method trigger(options = {})
+      # Specify a `trigger` component for a job.
+      #
+      # See {http://ci.openstack.org/jenkins-job-builder/publishers.html#publishers.trigger}.
+      #
+      # @param options [Hash] The configuration options for the component.
+      # @return [Hash] The specification for the component.
+      standard_component :trigger
+
+      # Specify an `xunit` component for a job.
       #
       # See {http://ci.openstack.org/jenkins-job-builder/publishers.html#publishers.xunit}.
       #
@@ -24,14 +76,20 @@ module Jujube
       # @param options [Hash] Top-level options for configuring the component.
       # @yieldparam types [Array] An array to which nested test type specifications should be
       #   added by the block.
+      # @return [Hash] The specification for the component.
       def xunit(options = {}, &block)
         to_config("xunit", nested_options(:types, options, &block))
       end
 
-      # @!endgroup
-
       # @!group xunit Test Types
 
+      # @!method unittest(options = {})
+      # Configure a `unittest` test type for an {#xunit} component.
+      #
+      # See {http://ci.openstack.org/jenkins-job-builder/publishers.html#publishers.xunit}.
+      #
+      # @param options [Hash] The configuration options for the test type.
+      # @return [Hash] The specification for the test type.
       named_config :unittest
 
     end
