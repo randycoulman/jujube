@@ -8,6 +8,13 @@ job "endToEnd" do |j|
   j.axes << slave(:arch, %w{i386 amd64})
 
   j.scm << git(url: "URL", branches: %w{master dev}, wipe_workspace: false)
+  j.scm << store(script: "SCRIPT",
+                 repository: "REPO",
+                 version_regex: "REGEX",
+                 parcel_builder_file: "FILENAME",
+                 minimum_blessing: "BLESSING") do |pundles|
+    pundles << package("PACKAGE") << bundle("BUNDLE")
+  end
 
   j.triggers << pollscm("INTERVAL")
   j.triggers << pollurl(cron: "CRON", polling_node: "NODE") do |urls|

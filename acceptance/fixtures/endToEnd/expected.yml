@@ -21,6 +21,15 @@
             - master
             - dev
           wipe-workspace: false
+      - store:
+          script: SCRIPT
+          repository: REPO
+          version-regex: REGEX
+          parcel-builder-file: FILENAME
+          minimum-blessing: BLESSING
+          pundles:
+            - package: PACKAGE
+            - bundle: BUNDLE
     triggers:
       - pollscm: INTERVAL
       - pollurl:
