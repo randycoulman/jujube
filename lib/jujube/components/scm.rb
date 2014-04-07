@@ -16,7 +16,8 @@ module Jujube
 
       # Specify a `store` SCM for a job.
       #
-      # This trigger requires support in jenkins-job-builder that has not yet been submitted.
+      # This trigger requires support in jenkins-job-builder that has not yet been merged.
+      # See {https://review.openstack.org/85729} for the patch.
       #
       # `store` can watch multiple pundles (packages or bundles) The specification for each
       # pundle is added in a nested configuration block using the {#package} or {#bundle} method.
