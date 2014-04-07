@@ -17,7 +17,7 @@ module Jujube
       # Specify a `pollurl` trigger for a job.
       #
       # This trigger requires support in jenkins-job-builder that has not yet been merged.
-      # See {https://review.openstack.org/#/c/83524/} for the patch.
+      # See {https://review.openstack.org/83524/} for the patch.
       #
       # `pollurl` can poll several URLs.  Each URL specification is added
       # in a nested configuration block using the {#url} method.
