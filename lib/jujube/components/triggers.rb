@@ -62,14 +62,14 @@ module Jujube
       # @!group pollurl Content Types
 
       # Configure a simple content check inside a {#url} specification of a
-      # {#pollurl} component.
+      # {#pollurl} trigger.
       # @return [Hash] The specification for the content type.
       def simple
         {"simple" => true}
       end
 
       # Configure a JSON content check inside a {#url} specification of a
-      # {#pollurl} component.
+      # {#pollurl} trigger.
       #
       # @param paths [String...] Zero or more JSONPath expressions.  Only changes to
       #   the parts of the JSON response that match one of the `paths` will trigger a build.
@@ -79,7 +79,7 @@ module Jujube
       end
 
       # Configure an XML content check inside a {#url} specification of a
-      # {#pollurl} component.
+      # {#pollurl} trigger.
       #
       # @param xpaths [String...] Zero or more XPath expressions.  Only changes to
       #   the parts of the XML response that match one of the `xpaths` will trigger a build.
@@ -89,7 +89,7 @@ module Jujube
       end
 
       # Configure a text content check inside a {#url} specification of a
-      # {#pollurl} component.
+      # {#pollurl} trigger.
       #
       # @param regexes [String...] Zero or more regular expressions.  Only changes to
       #   the parts of the text response that match one of the `regexes` will trigger a build.

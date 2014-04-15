@@ -6,7 +6,7 @@ module Jujube
       extend Macros
 
       # @!method timeout(options = {})
-      # Specify a `timeout` component for a job.
+      # Specify a `timeout` wrapper for a job.
       #
       # See {http://ci.openstack.org/jenkins-job-builder/publishers.html#wrappers.timeout}.
       #
@@ -14,7 +14,7 @@ module Jujube
       # @return [Hash] The specification for the component.
       standard_component :timeout
 
-      # Specify a `timestamps` component for a job.
+      # Specify a `timestamps` wrapper for a job.
       #
       # See {http://ci.openstack.org/jenkins-job-builder/wrappers.html#wrappers.timestamps}.
       #

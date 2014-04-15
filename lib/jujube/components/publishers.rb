@@ -6,7 +6,7 @@ module Jujube
       extend Macros
 
       # @!method archive(options = {})
-      # Specify an `archive` component for a job.
+      # Specify an `archive` publisher for a job.
       #
       # See {http://ci.openstack.org/jenkins-job-builder/publishers.html#publishers.archive}.
       #
@@ -15,7 +15,7 @@ module Jujube
       standard_component :archive
 
       # @!method cppcheck(options = {})
-      # Specify a `cppcheck` component for a job.
+      # Specify a `cppcheck` publisher for a job.
       #
       # See {http://ci.openstack.org/jenkins-job-builder/publishers.html#publishers.cppcheck}.
       #
@@ -24,7 +24,7 @@ module Jujube
       standard_component :cppcheck
 
       # @!method email_ext(options = {})
-      # Specify an `email-ext` component for a job.
+      # Specify an `email-ext` publisher for a job.
       #
       # See {http://ci.openstack.org/jenkins-job-builder/publishers.html#publishers.email-ext}.
       #
@@ -42,7 +42,7 @@ module Jujube
       standard_component :fitnesse
 
       # @!method ircbot(options = {})
-      # Specify an `ircbot` component for a job.
+      # Specify an `ircbot` publisher for a job.
       #
       # See {http://ci.openstack.org/jenkins-job-builder/publishers.html#publishers.ircbot}.
       #
@@ -51,7 +51,7 @@ module Jujube
       standard_component :ircbot
 
       # @!method junit(options = {})
-      # Specify a `junit` component for a job.
+      # Specify a `junit` publisher for a job.
       #
       # See {http://ci.openstack.org/jenkins-job-builder/publishers.html#publishers.junit}.
       #
@@ -60,7 +60,7 @@ module Jujube
       standard_component :junit
 
       # @!method trigger(options = {})
-      # Specify a `trigger` component for a job.
+      # Specify a `trigger` publisher for a job.
       #
       # See {http://ci.openstack.org/jenkins-job-builder/publishers.html#publishers.trigger}.
       #
@@ -68,7 +68,7 @@ module Jujube
       # @return [Hash] The specification for the component.
       standard_component :trigger
 
-      # Specify an `xunit` component for a job.
+      # Specify an `xunit` publisher for a job.
       #
       # See {http://ci.openstack.org/jenkins-job-builder/publishers.html#publishers.xunit}.
       #
@@ -93,7 +93,7 @@ module Jujube
       # @!group xunit Test Types
 
       # @!method unittest(options = {})
-      # Configure a `unittest` test type for an {#xunit} component.
+      # Configure a `unittest` test type for an {#xunit} publisher.
       #
       # See {http://ci.openstack.org/jenkins-job-builder/publishers.html#publishers.xunit}.
       #
