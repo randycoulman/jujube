@@ -41,6 +41,7 @@ job "endToEnd" do |j|
   j.publishers << archive(artifacts: "ARTIFACTS", latest_only: true, allow_empty: true)
   j.publishers << cppcheck(pattern: "PATTERN")
   j.publishers << email_ext(recipients: %w{fred barney})
+  j.publishers << fitnesse(results: "FITNESSE_RESULTS")
   j.publishers << ircbot(notify_start: true)
   j.publishers << junit(results: "RESULTS", keep_long_stdio: false)
   j.publishers << trigger(project: "PROJECT")

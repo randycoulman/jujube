@@ -75,6 +75,8 @@
           recipients:
             - fred
             - barney
+      - fitnesse:
+          results: FITNESSE_RESULTS
       - ircbot:
           notify-start: true
       - junit:

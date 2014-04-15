@@ -48,4 +48,9 @@ class PublishersTest < Minitest::Test
     expected = {"trigger" => {"project" => "PROJECT"}}
     assert_equal(expected, trigger(project: "PROJECT"))
   end
+
+  def test_fitnesse
+    expected = {"fitnesse" => {"results" => "RESULTS"}}
+    assert_equal(expected, fitnesse(results: "RESULTS"))
+  end
 end

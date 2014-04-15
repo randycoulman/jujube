@@ -32,6 +32,15 @@ module Jujube
       # @return [Hash] The specification for the component.
       standard_component :email_ext
 
+      # @!method fitnesse(options = {})
+      # Specify a `fitnesse` publisher for a job.
+      #
+      # This publisher requires support in jenkins-job-builder that has not yet been submitted.
+      #
+      # @param options [Hash] The configuration options for the component.
+      # @return [Hash] The specification for the component.
+      standard_component :fitnesse
+
       # @!method ircbot(options = {})
       # Specify an `ircbot` component for a job.
       #
