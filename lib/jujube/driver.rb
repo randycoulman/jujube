@@ -52,8 +52,13 @@ module Jujube
           options.output = Pathname.new(file)
         end
 
-        opts.on('-h', '--help', "Display this screen") do
+        opts.on_tail('-h', '--help', "Display this screen") do
           puts opts
+          exit
+        end
+
+        opts.on_tail('--version', "Show version") do
+          puts VERSION
           exit
         end
       end.parse!(argv)
