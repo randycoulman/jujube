@@ -80,8 +80,8 @@ class TriggersTest < Minitest::Test
   end
 
   def test_reverse
-    expected = { 'reverse' => { 'jobs' => 'foo, bar', 'result' => 'success' } }
-    actual = reverse(watch_projects: %w(foo bar), trigger_on: 'success')
+    expected = { "reverse" => { "jobs" => "foo, bar", "result" => "success" } }
+    actual = reverse(watch_projects: %w{foo bar}, trigger_on: "success")
     assert_equal(expected, actual)
   end
 end

@@ -48,7 +48,7 @@ module Jujube
       # @option opts [String] :trigger_on The condition to be met. One of 'success', 'unstable' or 'failure'
       # @return [Hash] The specification for the component.
       def reverse(opts)
-        { 'reverse' => { 'jobs' => Array(opts[:watch_projects]).join(', '), 'result' => opts[:trigger_on] } }
+        { "reverse" => { "jobs" => Array(opts[:watch_projects]).join(", "), "result" => opts[:trigger_on] } }
       end
 
       # @!group pollurl Helpers
