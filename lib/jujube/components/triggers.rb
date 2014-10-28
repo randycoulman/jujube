@@ -4,18 +4,6 @@ module Jujube
     # Helper methods for creating trigger components.
     module Triggers
 
-      # Specify a `reverse` trigger for a job.
-      #
-      # See {http://ci.openstack.org/jenkins-job-builder/triggers.html#triggers.reverse}.
-      #
-      # @param opts [Hash] The reverse project trigger options
-      # @option opts [String] :watch_projects A String or Array of Strings of project names
-      # @option opts [String] :trigger_on The condition to be met. One of 'success', 'unstable' or 'failure'
-      # @return [Hash] The specification for the component.
-      def reverse(opts)
-        { 'reverse' => { 'jobs' => Array(opts[:watch_projects]).join(', '), 'result' => opts[:trigger_on] } }
-      end
-
       # Specify a `pollscm` trigger for a job.
       #
       # See {http://ci.openstack.org/jenkins-job-builder/triggers.html#triggers.pollscm}.
@@ -49,6 +37,18 @@ module Jujube
       # @return [Hash] The specification for the component.
       def pollurl(options = {}, &block)
         to_config("pollurl", nested_options(:urls, options, &block))
+      end
+
+      # Specify a `reverse` trigger for a job.
+      #
+      # See {http://ci.openstack.org/jenkins-job-builder/triggers.html#triggers.reverse}.
+      #
+      # @param opts [Hash] The reverse project trigger options
+      # @option opts [String] :watch_projects A String or Array of Strings of project names
+      # @option opts [String] :trigger_on The condition to be met. One of 'success', 'unstable' or 'failure'
+      # @return [Hash] The specification for the component.
+      def reverse(opts)
+        { 'reverse' => { 'jobs' => Array(opts[:watch_projects]).join(', '), 'result' => opts[:trigger_on] } }
       end
 
       # @!group pollurl Helpers
