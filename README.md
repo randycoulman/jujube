@@ -106,11 +106,12 @@ The following sections and components are supported:
 
 * `axes`: (`label_expression`, `slave`)
 * `properties`: (`throttle`)
-* `scm`: (`git`)
-* `triggers`: (`pollscm`)
+* `scm`: (`git`, `store`)
+* `triggers`: (`pollscm`, `pollurl`, `reverse`)
 * `wrappers`: (`timeout`, `timestamps`)
 * `builders`: (`shell`)
-* `publishers`: (`archive`, `cppcheck`, `email_ext`, `ircbot`, `junit`, `trigger`, `xunit`)
+* `publishers`: (`archive`, `cppcheck`, `email_ext`, `fitnesse`, `ircbot`, `junit`, 
+  `trigger`, `unittest`, `xunit`)
 * `notifications`: None defined yet
 
 See [the end-to-end example job](examples/fixtures/endToEnd/endToEnd.job) for example
