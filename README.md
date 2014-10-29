@@ -176,9 +176,12 @@ tackle it, contact me and I'll be happy to help.
 
 1. Fork it
 2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+3. Make your change.  Please follow the coding conventions of the project and write good unit tests.
+   If you are adding a new component, please update `acceptance/fixtures/endToEnd/endToEnd.job` and
+   `acceptance/fixtures/endToEnd/expected.yml` as well.
+4. Commit your changes (`git commit -am 'Add some feature'`)
+5. Push to the branch (`git push origin my-new-feature`)
+6. Create new Pull Request
 
 ## Acknowledgements
 
