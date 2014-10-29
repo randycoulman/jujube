@@ -7,6 +7,11 @@ job "endToEnd" do |j|
 
   j.axes << slave(:arch, %w{i386 amd64})
 
+  j.properties << throttle(max_per_node: 2,
+                           max_total: 4,
+                           option: "category",
+                           categories: %w{CAT1 CAT2})
+
   j.scm << git(url: "URL", branches: %w{master dev}, wipe_workspace: false)
   j.scm << store(script: "SCRIPT",
                  repository: "REPO",

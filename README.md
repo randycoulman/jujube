@@ -105,6 +105,7 @@ The following job attributes are supported:
 The following sections and components are supported:
 
 * `axes`: (`label_expression`, `slave`)
+* `properties`: (`throttle`)
 * `scm`: (`git`)
 * `triggers`: (`pollscm`)
 * `wrappers`: (`timeout`, `timestamps`)

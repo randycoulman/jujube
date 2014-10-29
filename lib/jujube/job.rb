@@ -96,6 +96,17 @@ module Jujube
     #   @return [Array]
     section :axes
 
+    # @!method properties
+    #   The Properties for the job.
+    #
+    #   Add properties in the job's configuration block using helper methods defined in
+    #   {Components::Properties}.
+    #
+    #   See {http://ci.openstack.org/jenkins-job-builder/properties.html}.
+    #
+    #   @return [Array]
+    section :properties
+
     # @!method scm
     #   The SCMs for the job.
     #

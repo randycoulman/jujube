@@ -14,6 +14,14 @@
           values:
             - i386
             - amd64
+    properties:
+      - throttle:
+          max-per-node: 2
+          max-total: 4
+          option: category
+          categories:
+            - CAT1
+            - CAT2
     scm:
       - git:
           url: URL

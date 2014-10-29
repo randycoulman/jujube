@@ -1,6 +1,7 @@
 require_relative "components/macros"
 require_relative "components/helpers"
 require_relative "components/parameters"
+require_relative "components/properties"
 require_relative "components/scm"
 require_relative "components/triggers"
 require_relative "components/wrappers"
@@ -13,6 +14,7 @@ module Jujube
   module Components
     include Helpers
     include Parameters
+    include Properties
     include Scm
     include Triggers
     include Wrappers
