@@ -43,11 +43,12 @@ module Jujube
       #
       # See {http://ci.openstack.org/jenkins-job-builder/triggers.html#triggers.reverse}.
       #
-      # @param opts [Hash] The reverse project trigger options
-      # @option opts [String] :jobs A String or Array of Strings of project names. Note that
+      # @param options [Hash] The reverse project trigger options.
+      # @option options [String, Array<String>] :jobs The jobs to watch. Note that
       #   jenkins-job-builder takes a string of comma-separated job names; Jujube does that
       #   formatting automatically, so pass in a String or Array of Strings.
-      # @option opts [String] :result The condition to be met. One of 'success', 'unstable' or 'failure'
+      # @option options [String] :result Build results to monitor for.
+      #   One of 'success', 'unstable' or 'failure'.
       # @return [Hash] The specification for the component.
       def reverse(options = {})
         formatted_jobs = Array(options[:jobs]).join(", ")
