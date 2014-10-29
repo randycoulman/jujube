@@ -55,6 +55,9 @@
                 - text:
                   - REGEX1
                   - REGEX2
+      - reverse:
+          jobs: "PROJECT1, PROJECT2"
+          result: unstable
     wrappers:
       - timeout:
           type: elastic

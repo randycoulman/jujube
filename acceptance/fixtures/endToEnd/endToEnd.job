@@ -32,6 +32,7 @@ job "endToEnd" do |j|
       content << text("REGEX1", "REGEX2")
     end
   end
+  j.triggers << reverse(jobs: %w{PROJECT1 PROJECT2}, result: 'unstable')
 
   j.wrappers << timeout(type: 'elastic', elastic_percentage: 150, elastic_default_timeout: 5, fail: true)
   j.wrappers << timestamps
