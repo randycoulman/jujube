@@ -101,6 +101,7 @@ The following job attributes are supported:
 * `block_upstream`
 * `block_downstream`
 * `quiet_period`
+* `disabled`
 
 The following sections and components are supported:
 

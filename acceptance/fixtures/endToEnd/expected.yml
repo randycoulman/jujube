@@ -6,6 +6,7 @@
     block-upstream: true
     block-downstream: false
     quiet-period: 42
+    disabled: true
     project-type: matrix
     axes:
       - axis:

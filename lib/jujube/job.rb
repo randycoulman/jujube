@@ -70,7 +70,7 @@ module Jujube
     #
     #   See {http://ci.openstack.org/jenkins-job-builder/general.html}.
     #
-    #   @return [Booelan]
+    #   @return [Boolean]
     attribute :block_downstream
 
     # @!attribute quiet_period
@@ -80,6 +80,14 @@ module Jujube
     #
     #   @return [Fixnum]
     attribute :quiet_period
+
+    # @!attribute disabled
+    #   `true` if this job should be disabled.
+    #
+    #   See {http://ci.openstack.org/jenkins-job-builder/general.html}.
+    #
+    #   @return [Boolean]
+    attribute :disabled
 
     # @!endgroup
 
