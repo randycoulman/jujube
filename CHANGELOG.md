@@ -7,7 +7,8 @@ adheres to [Semantic Versioning](http://semver.org/).
 
 ### Added
 
-* This CHANGELOG
+* Links to documentation for the `fitnesse` publisher and `store` SCM that have now been merged into jenkins-job-builder.
+* This CHANGELOG.
 
 ## [0.9.0][0.9.0] - 2015-04-09
 

@@ -35,8 +35,7 @@ module Jujube
       # @!method fitnesse(options = {})
       # Specify a `fitnesse` publisher for a job.
       #
-      # This publisher requires support in jenkins-job-builder that has not yet been merged.
-      # See {https://review.openstack.org/87711} for the patch.
+      # See {http://ci.openstack.org/jenkins-job-builder/publishers.html#publishers.fitnesse}.
       #
       # @param options [Hash] The configuration options for the component.
       # @return [Hash] The specification for the component.
