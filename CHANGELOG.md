@@ -9,7 +9,7 @@ adheres to [Semantic Versioning](http://semver.org/).
 
 ### Added
 
-* Support the `priority_sorter` property.
+* Support the `priority_sorter` property. (see http://ci.openstack.org/jenkins-job-builder/properties.html#properties.priority-sorter).
 * Links to documentation for the `fitnesse` publisher and `store` SCM that have now been merged into jenkins-job-builder.
 * This CHANGELOG.
 
