@@ -12,6 +12,7 @@ job "endToEnd" do |j|
                            max_total: 4,
                            option: "category",
                            categories: %w{CAT1 CAT2})
+  j.properties << priority_sorter(priority: 150)
 
   j.scm << git(url: "URL", branches: %w{master dev}, wipe_workspace: false)
   j.scm << store(script: "SCRIPT",

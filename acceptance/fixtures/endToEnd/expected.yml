@@ -23,6 +23,8 @@
           categories:
             - CAT1
             - CAT2
+      - priority-sorter:
+          priority: 150
     scm:
       - git:
           url: URL
