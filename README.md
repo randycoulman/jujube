@@ -3,6 +3,7 @@
 [![Gem Version](https://badge.fury.io/rb/jujube.png)](http://badge.fury.io/rb/jujube)
 [![Build Status](https://travis-ci.org/randycoulman/jujube.svg?branch=master)](https://travis-ci.org/randycoulman/jujube)
 [![Code Climate](https://codeclimate.com/github/randycoulman/jujube.png)](https://codeclimate.com/github/randycoulman/jujube)
+![Maintenance Status](https://img.shields.io/badge/maintenance-active-green.svg)
 
 **Jujube** is a Ruby front-end for
 [jenkins-job-builder](https://github.com/openstack-infra/jenkins-job-builder).
