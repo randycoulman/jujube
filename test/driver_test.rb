@@ -1,9 +1,7 @@
 require_relative "test_helper"
-require "flexmock"
+require "flexmock/minitest"
 
 class DriverTest < Minitest::Test
-  include FlexMock::TestCase
-
   def setup
     @jobs = [Object.new, Object.new]
     @loader = flexmock("loader", :on, Jujube::JobLoader)
