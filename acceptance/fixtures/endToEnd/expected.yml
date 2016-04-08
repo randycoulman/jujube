@@ -42,7 +42,9 @@
             - package: PACKAGE
             - bundle: BUNDLE
     triggers:
-      - pollscm: INTERVAL
+      - pollscm:
+          cron: INTERVAL
+          ignore-post-commit-hooks: true
       - pollurl:
           cron: CRON
           polling-node: NODE

@@ -5,6 +5,12 @@ adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
 
+### Breaking Changes
+
+* The `pollscm` component has been updated to conform to the new API in jenkins-job-builder 1.3.0 and later.  See http://docs.openstack.org/infra/jenkins-job-builder/triggers.html#triggers.pollscm for details of the change.  If you need to use the `pollscm` component and older versions of jenkins-job-builder, then stick with version 0.10.0 or earlier of Jujube.
+
+* With this release, we are no longer officially supporting Ruby versions less than 2.1.  Previous versions of Ruby are [considered end-of-life (EOL)](https://www.ruby-lang.org/en/downloads/) by the Ruby core team.
+
 ## [0.10.0][0.10.0]
 
 ### Added

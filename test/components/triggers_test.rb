@@ -4,7 +4,14 @@ class TriggersTest < Minitest::Test
   include Jujube::Components
 
   def test_pollscm
-    assert_equal({"pollscm" => "INTERVAL"}, pollscm("INTERVAL"))
+    expected = {
+      "pollscm" => {
+        "cron" => "CRON",
+        "ignore-post-commit-hooks" => true
+      }
+    }
+    actual = pollscm(cron: "CRON", ignore_post_commit_hooks: true)
+    assert_equal(expected, actual)
   end
 
   def test_pollurl_with_no_content_checks

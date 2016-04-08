@@ -23,7 +23,7 @@ job "endToEnd" do |j|
     pundles << package("PACKAGE") << bundle("BUNDLE")
   end
 
-  j.triggers << pollscm("INTERVAL")
+  j.triggers << pollscm(cron: "INTERVAL", ignore_post_commit_hooks: true)
   j.triggers << pollurl(cron: "CRON", polling_node: "NODE") do |urls|
     urls << url("URL",
                 proxy: false,
