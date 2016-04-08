@@ -11,6 +11,14 @@ adheres to [Semantic Versioning](http://semver.org/).
 
 * With this release, we are no longer officially supporting Ruby versions less than 2.1.  Previous versions of Ruby are [considered end-of-life (EOL)](https://www.ruby-lang.org/en/downloads/) by the Ruby core team.
 
+### Added
+
+* Link to the documentation for the `pollurl` trigger that has new been merged into jenkins-job-builder.
+
+### Changed
+
+* The jenkins-job-builder documentation has moved to a new location, so all documentation links (including within this CHANGELOG) have been updated.
+
 ## [0.10.0][0.10.0]
 
 ### Added
