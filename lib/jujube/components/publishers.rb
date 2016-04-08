@@ -8,7 +8,7 @@ module Jujube
       # @!method archive(options = {})
       # Specify an `archive` publisher for a job.
       #
-      # See {http://ci.openstack.org/jenkins-job-builder/publishers.html#publishers.archive}.
+      # See {http://docs.openstack.org/infra/jenkins-job-builder/publishers.html#publishers.archive}.
       #
       # @param options [Hash] The configuration options for the component.
       # @return [Hash] The specification for the component.
@@ -17,7 +17,7 @@ module Jujube
       # @!method cppcheck(options = {})
       # Specify a `cppcheck` publisher for a job.
       #
-      # See {http://ci.openstack.org/jenkins-job-builder/publishers.html#publishers.cppcheck}.
+      # See {http://docs.openstack.org/infra/jenkins-job-builder/publishers.html#publishers.cppcheck}.
       #
       # @param options [Hash] The configuration options for the component.
       # @return [Hash] The specification for the component.
@@ -26,7 +26,7 @@ module Jujube
       # @!method email_ext(options = {})
       # Specify an `email-ext` publisher for a job.
       #
-      # See {http://ci.openstack.org/jenkins-job-builder/publishers.html#publishers.email-ext}.
+      # See {http://docs.openstack.org/infra/jenkins-job-builder/publishers.html#publishers.email-ext}.
       #
       # @param options [Hash] The configuration options for the component.
       # @return [Hash] The specification for the component.
@@ -35,7 +35,7 @@ module Jujube
       # @!method fitnesse(options = {})
       # Specify a `fitnesse` publisher for a job.
       #
-      # See {http://ci.openstack.org/jenkins-job-builder/publishers.html#publishers.fitnesse}.
+      # See {http://docs.openstack.org/infra/jenkins-job-builder/publishers.html#publishers.fitnesse}.
       #
       # @param options [Hash] The configuration options for the component.
       # @return [Hash] The specification for the component.
@@ -44,7 +44,7 @@ module Jujube
       # @!method ircbot(options = {})
       # Specify an `ircbot` publisher for a job.
       #
-      # See {http://ci.openstack.org/jenkins-job-builder/publishers.html#publishers.ircbot}.
+      # See {http://docs.openstack.org/infra/jenkins-job-builder/publishers.html#publishers.ircbot}.
       #
       # @param options [Hash] The configuration options for the component.
       # @return [Hash] The specification for the component.
@@ -53,7 +53,7 @@ module Jujube
       # @!method junit(options = {})
       # Specify a `junit` publisher for a job.
       #
-      # See {http://ci.openstack.org/jenkins-job-builder/publishers.html#publishers.junit}.
+      # See {http://docs.openstack.org/infra/jenkins-job-builder/publishers.html#publishers.junit}.
       #
       # @param options [Hash] The configuration options for the component.
       # @return [Hash] The specification for the component.
@@ -62,7 +62,7 @@ module Jujube
       # @!method trigger(options = {})
       # Specify a `trigger` publisher for a job.
       #
-      # See {http://ci.openstack.org/jenkins-job-builder/publishers.html#publishers.trigger}.
+      # See {http://docs.openstack.org/infra/jenkins-job-builder/publishers.html#publishers.trigger}.
       #
       # @param options [Hash] The configuration options for the component.
       # @return [Hash] The specification for the component.
@@ -70,7 +70,7 @@ module Jujube
 
       # Specify an `xunit` publisher for a job.
       #
-      # See {http://ci.openstack.org/jenkins-job-builder/publishers.html#publishers.xunit}.
+      # See {http://docs.openstack.org/infra/jenkins-job-builder/publishers.html#publishers.xunit}.
       #
       # `xunit` can publish multiple sets of test results.  The specification for each set
       # of test results is added in a nested configuration block using the {#unittest} method.
@@ -95,7 +95,7 @@ module Jujube
       # @!method unittest(options = {})
       # Configure a `unittest` test type for an {#xunit} publisher.
       #
-      # See {http://ci.openstack.org/jenkins-job-builder/publishers.html#publishers.xunit}.
+      # See {http://docs.openstack.org/infra/jenkins-job-builder/publishers.html#publishers.xunit}.
       #
       # @param options [Hash] The configuration options for the test type.
       # @return [Hash] The specification for the test type.

@@ -6,7 +6,7 @@ module Jujube
 
       # Specify a `shell` builder for a job.
       #
-      # See {http://ci.openstack.org/jenkins-job-builder/builders.html#builders.shell}.
+      # See {http://docs.openstack.org/infra/jenkins-job-builder/builders.html#builders.shell}.
       #
       # @param command [String] The shell command to execute.
       # @return [Hash] The specification for the component.

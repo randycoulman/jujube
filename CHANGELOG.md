@@ -15,7 +15,7 @@ adheres to [Semantic Versioning](http://semver.org/).
 
 ### Added
 
-* Support the `priority_sorter` property. (see http://ci.openstack.org/jenkins-job-builder/properties.html#properties.priority-sorter).
+* Support the `priority_sorter` property. (see http://docs.openstack.org/infra/jenkins-job-builder/properties.html#properties.priority-sorter).
 * Links to documentation for the `fitnesse` publisher and `store` SCM that have now been merged into jenkins-job-builder.
 * This CHANGELOG.
 
@@ -24,17 +24,17 @@ adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 
 * Support the `disabled` job attribute
-(see http://ci.openstack.org/jenkins-job-builder/general.html).
+(see http://docs.openstack.org/infra/jenkins-job-builder/general.html).
 
 ## [0.8.0][0.8.0] - 2014-10-29
 
-* Support the `throttle` job property (see http://ci.openstack.org/jenkins-job-builder/properties.html#properties.throttle).
+* Support the `throttle` job property (see http://docs.openstack.org/infra/jenkins-job-builder/properties.html#properties.throttle).
 
 ## [0.7.0][0.7.0] - 2014-10-28
 
 ### Added
 
-* Support the `reverse` trigger (see http://ci.openstack.org/jenkins-job-builder/triggers.html#triggers.reverse).
+* Support the `reverse` trigger (see http://docs.openstack.org/infra/jenkins-job-builder/triggers.html#triggers.reverse).
 
 ## [0.6.0][0.6.0] - 2014-08-25
 
@@ -46,13 +46,13 @@ adheres to [Semantic Versioning](http://semver.org/).
 
 ### Added
 
-* Support the `fitnesse` publisher (see http://ci.openstack.org/jenkins-job-builder/publishers.html#publishers.fitnesse).
+* Support the `fitnesse` publisher (see http://docs.openstack.org/infra/jenkins-job-builder/publishers.html#publishers.fitnesse).
 
 ## [0.5.1][0.5.1] - 2014-04-07
 
 ### Added
 
-* Support the `store` SCM (see http://ci.openstack.org/jenkins-job-builder/scm.html#scm.store).
+* Support the `store` SCM (see http://docs.openstack.org/infra/jenkins-job-builder/scm.html#scm.store).
 
 ## [0.5.0][0.5.0] - 2014-03-28
 

@@ -9,7 +9,7 @@ module Jujube
       #
       # This trigger requires jenkins-job-builder 1.3.0 or later.
       #
-      # See {http://ci.openstack.org/jenkins-job-builder/triggers.html#triggers.pollscm}.
+      # See {http://docs.openstack.org/infra/jenkins-job-builder/triggers.html#triggers.pollscm}.
       #
       # @param options [Hash] The configuration options for the component.
       # @return [Hash] The specification for the component.
@@ -41,7 +41,7 @@ module Jujube
 
       # Specify a `reverse` trigger for a job.
       #
-      # See {http://ci.openstack.org/jenkins-job-builder/triggers.html#triggers.reverse}.
+      # See {http://docs.openstack.org/infra/jenkins-job-builder/triggers.html#triggers.reverse}.
       #
       # @param options [Hash] The reverse project trigger options.
       # @option options [String, Array<String>] :jobs The jobs to watch. Note that

@@ -27,7 +27,7 @@ module Jujube
     # @!attribute name
     #   The name of the job - will be the name as seen in Jenkins.
     #
-    #   See {http://ci.openstack.org/jenkins-job-builder/general.html}.
+    #   See {http://docs.openstack.org/infra/jenkins-job-builder/general.html}.
     #
     #   @return [String]
     attribute :name
@@ -36,7 +36,7 @@ module Jujube
     #   The type of job. This normally does not need to be specified, as it
     #   will be inferred as `matrix` if any `axes` are added.
     #
-    #   See {http://ci.openstack.org/jenkins-job-builder/general.html}.
+    #   See {http://docs.openstack.org/infra/jenkins-job-builder/general.html}.
     #
     #   @return [String]
     attribute :project_type
@@ -44,7 +44,7 @@ module Jujube
     # @!attribute description
     #   The description of the job.
     #
-    #   See {http://ci.openstack.org/jenkins-job-builder/general.html}.
+    #   See {http://docs.openstack.org/infra/jenkins-job-builder/general.html}.
     #
     #   @return [String]
     attribute :description
@@ -52,7 +52,7 @@ module Jujube
     # @!attribute node
     #   The Jenkins node or named group where the job should be run.
     #
-    #   See {http://ci.openstack.org/jenkins-job-builder/general.html}.
+    #   See {http://docs.openstack.org/infra/jenkins-job-builder/general.html}.
     #
     #   @return [String]
     attribute :node
@@ -60,7 +60,7 @@ module Jujube
     # @!attribute block_upstream
     #   `true` if this job should block while upstream jobs are running.
     #
-    #   See {http://ci.openstack.org/jenkins-job-builder/general.html}.
+    #   See {http://docs.openstack.org/infra/jenkins-job-builder/general.html}.
     #
     #   @return [Boolean]
     attribute :block_upstream
@@ -68,7 +68,7 @@ module Jujube
     # @!attribute block_downstream
     #   `true` if this job should block while downstream jobs are running.
     #
-    #   See {http://ci.openstack.org/jenkins-job-builder/general.html}.
+    #   See {http://docs.openstack.org/infra/jenkins-job-builder/general.html}.
     #
     #   @return [Boolean]
     attribute :block_downstream
@@ -76,7 +76,7 @@ module Jujube
     # @!attribute quiet_period
     #   Number of seconds to wait between consecutive runs of the job.
     #
-    #   See {http://ci.openstack.org/jenkins-job-builder/general.html}.
+    #   See {http://docs.openstack.org/infra/jenkins-job-builder/general.html}.
     #
     #   @return [Fixnum]
     attribute :quiet_period
@@ -84,7 +84,7 @@ module Jujube
     # @!attribute disabled
     #   `true` if this job should be disabled.
     #
-    #   See {http://ci.openstack.org/jenkins-job-builder/general.html}.
+    #   See {http://docs.openstack.org/infra/jenkins-job-builder/general.html}.
     #
     #   @return [Boolean]
     attribute :disabled
@@ -99,7 +99,7 @@ module Jujube
     #   Add axes in the job's configuration block using helper methods defined in
     #   {Components::Parameters}.
     #
-    #   See {http://ci.openstack.org/jenkins-job-builder/project_matrix.html}.
+    #   See {http://docs.openstack.org/infra/jenkins-job-builder/project_matrix.html}.
     #
     #   @return [Array]
     section :axes
@@ -110,7 +110,7 @@ module Jujube
     #   Add properties in the job's configuration block using helper methods defined in
     #   {Components::Properties}.
     #
-    #   See {http://ci.openstack.org/jenkins-job-builder/properties.html}.
+    #   See {http://docs.openstack.org/infra/jenkins-job-builder/properties.html}.
     #
     #   @return [Array]
     section :properties
@@ -121,7 +121,7 @@ module Jujube
     #   Add SCMs in the job's configuration block using helper methods defined in
     #   {Components::Scm}.
     #
-    #   See {http://ci.openstack.org/jenkins-job-builder/scm.html}.
+    #   See {http://docs.openstack.org/infra/jenkins-job-builder/scm.html}.
     #
     #   @return [Array]
     section :scm
@@ -132,7 +132,7 @@ module Jujube
     #   Add triggers in the job's configuration block using helper methods defined in
     #   {Components::Triggers}.
     #
-    #   See {http://ci.openstack.org/jenkins-job-builder/triggers.html}.
+    #   See {http://docs.openstack.org/infra/jenkins-job-builder/triggers.html}.
     #
     #   @return [Array]
     section :triggers
@@ -143,7 +143,7 @@ module Jujube
     #   Add wrappers in the job's configuration block using helper methods defined in
     #   {Components::Wrappers}.
     #
-    #   See {http://ci.openstack.org/jenkins-job-builder/wrappers.html}.
+    #   See {http://docs.openstack.org/infra/jenkins-job-builder/wrappers.html}.
     #
     #   @return [Array]
     section :wrappers
@@ -154,7 +154,7 @@ module Jujube
     #   Add builders in the job's configuration block using helper methods defined in
     #   {Components::Builders}.
     #
-    #   See {http://ci.openstack.org/jenkins-job-builder/builders.html}.
+    #   See {http://docs.openstack.org/infra/jenkins-job-builder/builders.html}.
     #
     #   @return [Array]
     section :builders
@@ -165,7 +165,7 @@ module Jujube
     #   Add publishers in the job's configuration block using helper methods defined in
     #   {Components::Publishers}.
     #
-    #   See {http://ci.openstack.org/jenkins-job-builder/publishers.html}.
+    #   See {http://docs.openstack.org/infra/jenkins-job-builder/publishers.html}.
     #
     #   @return [Array]
     section :publishers
@@ -176,7 +176,7 @@ module Jujube
     #   Add notifications in the job's configuration block using helper methods defined in
     #   {Components::Notifications}.
     #
-    #   See {http://ci.openstack.org/jenkins-job-builder/notifications.html}.
+    #   See {http://docs.openstack.org/infra/jenkins-job-builder/notifications.html}.
     #
     #   @return [Array]
     section :notifications

@@ -8,7 +8,7 @@ module Jujube
       # @!method timeout(options = {})
       # Specify a `timeout` wrapper for a job.
       #
-      # See {http://ci.openstack.org/jenkins-job-builder/publishers.html#wrappers.timeout}.
+      # See {http://docs.openstack.org/infra/jenkins-job-builder/publishers.html#wrappers.timeout}.
       #
       # @param options [Hash] The configuration options for the component.
       # @return [Hash] The specification for the component.
@@ -16,7 +16,7 @@ module Jujube
 
       # Specify a `timestamps` wrapper for a job.
       #
-      # See {http://ci.openstack.org/jenkins-job-builder/wrappers.html#wrappers.timestamps}.
+      # See {http://docs.openstack.org/infra/jenkins-job-builder/wrappers.html#wrappers.timestamps}.
       #
       # @return [Hash] The specification for the component.
       def timestamps

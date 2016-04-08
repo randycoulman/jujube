@@ -8,7 +8,7 @@ module Jujube
       # @!method git(options = {})
       # Specify a `git` SCM for a job.
       #
-      # See {http://ci.openstack.org/jenkins-job-builder/publishers.html#scm.git}.
+      # See {http://docs.openstack.org/infra/jenkins-job-builder/publishers.html#scm.git}.
       #
       # @param options [Hash] The configuration options for the component.
       # @return [Hash] The specification for the component.
@@ -16,7 +16,7 @@ module Jujube
 
       # Specify a `store` SCM for a job.
       #
-      # See {http://ci.openstack.org/jenkins-job-builder/scm.html#scm.store}.
+      # See {http://docs.openstack.org/infra/jenkins-job-builder/scm.html#scm.store}.
       #
       # `store` can watch multiple pundles (packages or bundles) The specification for each
       # pundle is added in a nested configuration block using the {#package} or {#bundle} method.
