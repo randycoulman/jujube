@@ -9,6 +9,7 @@ rvm:
   - rbx-2
 matrix:
   allow_failures:
-    - jruby-9
-    - jruby-head
+    - rvm: jruby-9
+    - rvm: jruby-head
+  fast_finish: true
 script: "bundle exec rake"
