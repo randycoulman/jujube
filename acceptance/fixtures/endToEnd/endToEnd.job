@@ -56,4 +56,6 @@ job "endToEnd" do |j|
   j.publishers << xunit do |types|
     types << unittest(pattern: "PATTERN", deleteoutput: false)
   end
+
+  j.parameters << string(name: "some-param", default: "def_val", description: "Some string parameter.")
 end
