@@ -105,3 +105,8 @@
             - unittest:
                 pattern: PATTERN
                 deleteoutput: false
+    parameters:
+      - string:
+          name: some-param
+          default: def_val
+          description: "Some string parameter."

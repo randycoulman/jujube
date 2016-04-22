@@ -181,6 +181,17 @@ module Jujube
     #   @return [Array]
     section :notifications
 
+    # @!method parameters
+    #   The parameters for the job.
+    #
+    #   Add parameters in the job's configuration block using helper methods defined in
+    #   {Components::Parameters}.
+    #
+    #   See {http://docs.openstack.org/infra/jenkins-job-builder/parameters.html}.
+    #
+    #   @return [Array]
+    section :parameters
+
     # @!endgroup
 
     # Generate a YAML representation of the `Job`.
