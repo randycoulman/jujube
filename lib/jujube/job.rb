@@ -104,6 +104,17 @@ module Jujube
     #   @return [Array]
     section :axes
 
+    # @!method parameters
+    #   The parameters for the job.
+    #
+    #   Add parameters in the job's configuration block using helper methods defined in
+    #   {Components::Parameters}.
+    #
+    #   See {http://docs.openstack.org/infra/jenkins-job-builder/parameters.html}.
+    #
+    #   @return [Array]
+    section :parameters
+
     # @!method properties
     #   The Properties for the job.
     #

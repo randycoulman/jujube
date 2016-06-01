@@ -15,6 +15,11 @@
           values:
             - i386
             - amd64
+    parameters:
+      - string:
+          name: STRING_PARAM
+          default: "DEFAULT VALUE"
+          description: DESCRIPTION
     properties:
       - throttle:
           max-per-node: 2

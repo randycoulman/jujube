@@ -94,7 +94,6 @@ end
 
 The following job attributes are supported:
 
-* `description`
 * `project_type` -- doesn't normally need to be specified.  If any `axes` are added to the
   job, then `project_type` is automatically inferred to be `matrix`
 * `description`
@@ -107,6 +106,7 @@ The following job attributes are supported:
 The following sections and components are supported:
 
 * `axes`: (`label_expression`, `slave`)
+* `parameters`: (`string`)
 * `properties`: (`throttle`)
 * `scm`: (`git`, `store`)
 * `triggers`: (`pollscm`, `pollurl`, `reverse`)

@@ -3,6 +3,7 @@ module Jujube
 
     # Helper methods for creating job parameter components.
     module Parameters
+      extend Macros
 
       # @!group Matrix Axes
 
@@ -27,6 +28,15 @@ module Jujube
       def slave(name, values)
         axis(name, values, :slave)
       end
+
+      # @!method string(options = {})
+      # Specify a `string` parameter for a job.
+      #
+      # See {http://docs.openstack.org/infra/jenkins-job-builder/parameters.html#parameters.string}.
+      #
+      # @param options [Hash] The configuration options for the component.
+      # @return [Hash] The specification for the component.
+      standard_component :string
 
       private
 
