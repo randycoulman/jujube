@@ -15,6 +15,11 @@
           values:
             - i386
             - amd64
+    parameters:
+      - string:
+          name: STRING_PARAM
+          default: "DEFAULT VALUE"
+          description: DESCRIPTION
     properties:
       - throttle:
           max-per-node: 2
@@ -105,8 +110,3 @@
             - unittest:
                 pattern: PATTERN
                 deleteoutput: false
-    parameters:
-      - string:
-          name: some-param
-          default: def_val
-          description: "Some string parameter."

@@ -8,6 +8,8 @@ job "endToEnd" do |j|
 
   j.axes << slave(:arch, %w{i386 amd64})
 
+  j.parameters << string(name: "STRING_PARAM", default: "DEFAULT VALUE", description: "DESCRIPTION")
+
   j.properties << throttle(max_per_node: 2,
                            max_total: 4,
                            option: "category",
@@ -56,6 +58,4 @@ job "endToEnd" do |j|
   j.publishers << xunit do |types|
     types << unittest(pattern: "PATTERN", deleteoutput: false)
   end
-
-  j.parameters << string(name: "some-param", default: "def_val", description: "Some string parameter.")
 end

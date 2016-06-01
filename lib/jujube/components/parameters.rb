@@ -5,15 +5,6 @@ module Jujube
     module Parameters
       extend Macros
 
-      # @!method string(options = {})
-      # Specify a `string` parameter for a job.
-      #
-      # See {http://docs.openstack.org/infra/jenkins-job-builder/parameters.html#parameters.string}.
-      #
-      # @param options [Hash] The configuration options for the component.
-      # @return [Hash] The specification for the component.
-      standard_component :string
-
       # @!group Matrix Axes
 
       # Specify a `label-expression` axis for a matrix job.
@@ -37,6 +28,15 @@ module Jujube
       def slave(name, values)
         axis(name, values, :slave)
       end
+
+      # @!method string(options = {})
+      # Specify a `string` parameter for a job.
+      #
+      # See {http://docs.openstack.org/infra/jenkins-job-builder/parameters.html#parameters.string}.
+      #
+      # @param options [Hash] The configuration options for the component.
+      # @return [Hash] The specification for the component.
+      standard_component :string
 
       private
 
