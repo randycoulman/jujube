@@ -93,6 +93,11 @@ module Jujube
 
     # @!group Sections
 
+    # Sections are listed in the order specified under Module Execution in the
+    # Jenkins Job Builder documentation.
+    #
+    # See {http://docs.openstack.org/infra/jenkins-job-builder/definition.html#module-execution}.
+
     # @!method axes
     #   The matrix axes for the job.
     #
