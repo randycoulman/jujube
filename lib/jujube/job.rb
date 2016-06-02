@@ -205,6 +205,8 @@ module Jujube
       {'job' => config}
     end
 
+    @registry = nil
+
     # Keep track of all `Job`s defined during the execution of the passed block.
     #
     # This is used during job loading so that no extra syntax is required in the job

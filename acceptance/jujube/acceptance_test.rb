@@ -26,11 +26,11 @@ class AcceptanceTest < Minitest::Test
   end
 
   def assert_file_exists(filename)
-    assert(File.exists?(filename), "File #{filename} does not exist")
+    assert(File.exist?(filename), "File #{filename} does not exist")
   end
 
   def assert_directory_exists(filename)
-    assert(Dir.exists?(filename), "Directory #{filename} does not exist")
+    assert(Dir.exist?(filename), "Directory #{filename} does not exist")
   end
 
   def fixture_root
