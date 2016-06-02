@@ -5,6 +5,7 @@ module Jujube
     module Triggers
       extend Macros
 
+      # @!method pollscm(options = {})
       # Specify a `pollscm` trigger for a job.
       #
       # This trigger requires jenkins-job-builder 1.3.0 or later.

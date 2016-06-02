@@ -22,7 +22,7 @@ EOF
   spec.require_paths = ["lib"]
 
   spec.add_development_dependency "bundler", "~> 1.3"
-  spec.add_development_dependency "rake", "~> 10.1"
+  spec.add_development_dependency "rake", ">= 10.1", "< 12"
   spec.add_development_dependency "minitest", "~> 5.3"
   spec.add_development_dependency "flexmock", "~> 2.0"
   spec.add_development_dependency "yard", "~>0.8.7"
