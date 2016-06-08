@@ -20,6 +20,12 @@
           name: STRING_PARAM
           default: "DEFAULT VALUE"
           description: DESCRIPTION
+      - validating-string:
+          name: VALIDATING
+          default: DEFAULT
+          description: DESCRIPTION
+          regex: REGEX
+          msg: MESSAGE
     properties:
       - throttle:
           max-per-node: 2
