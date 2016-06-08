@@ -106,7 +106,7 @@ The following job attributes are supported:
 The following sections and components are supported:
 
 * `axes`: (`label_expression`, `slave`)
-* `parameters`: (`string`)
+* `parameters`: (`string`, `validating_string`)
 * `properties`: (`throttle`)
 * `scm`: (`git`, `store`)
 * `triggers`: (`pollscm`, `pollurl`, `reverse`)

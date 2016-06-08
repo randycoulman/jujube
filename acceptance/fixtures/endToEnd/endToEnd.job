@@ -9,6 +9,11 @@ job "endToEnd" do |j|
   j.axes << slave(:arch, %w{i386 amd64})
 
   j.parameters << string(name: "STRING_PARAM", default: "DEFAULT VALUE", description: "DESCRIPTION")
+  j.parameters << validating_string(name: "VALIDATING",
+                                    default: "DEFAULT",
+                                    description: "DESCRIPTION",
+                                    regex: "REGEX",
+                                    msg: "MESSAGE")
 
   j.properties << throttle(max_per_node: 2,
                            max_total: 4,
