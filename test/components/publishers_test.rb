@@ -42,6 +42,66 @@ class PublishersTest < Minitest::Test
     assert_equal(expected, trigger(project: "PROJECT"))
   end
 
+  def test_trigger_parameterized_builds
+    expected = {"trigger-parameterized-builds" => [
+        {"project" => ["PROJECT1", "PROJECT2"], "condition" => "UNSTABLE"}
+    ]}
+    actual = trigger_parameterized_builds do |builds|
+      builds << build(project: %w[PROJECT1 PROJECT2], condition: "UNSTABLE")
+    end
+    assert_equal(expected, actual)
+  end
+
+  def test_trigger_parameterized_builds_formats_single_predefined_parameter
+    expected = {"trigger-parameterized-builds" => [
+        {"predefined-parameters" => "param=value"}
+    ]}
+    actual = trigger_parameterized_builds do |builds|
+      builds << build(predefined_parameters: {param: 'value'})
+    end
+    assert_equal(expected, actual)
+  end
+
+  def test_trigger_parameterized_builds_formats_multiiple_predefined_parameters
+    expected = {"trigger-parameterized-builds" => [
+        {"predefined-parameters" => "param1=value1\nparam2=value2\n"}
+    ]}
+    actual = trigger_parameterized_builds do |builds|
+      builds << build(predefined_parameters: {param1: 'value1', param2: 'value2'})
+    end
+    assert_equal(expected, actual)
+  end
+
+  def test_trigger_parameterized_builds_formats_boolean_parameters
+    expected = {"trigger-parameterized-builds" => [
+        {"boolean-parameters" => {"param_1" => true, "param_2" => false}}
+    ]}
+    actual = trigger_parameterized_builds do |builds|
+      builds << build(boolean_parameters: {param_1: true, param_2: false})
+    end
+    assert_equal(expected, actual)
+  end
+
+  def test_trigger_parameterized_builds_formats_git_revision_as_boolean
+    expected = {"trigger-parameterized-builds" => [
+        {"git-revision" => true}
+    ]}
+    actual = trigger_parameterized_builds do |builds|
+      builds << build(git_revision: true)
+    end
+    assert_equal(expected, actual)
+  end
+
+  def test_trigger_parameterized_builds_formats_git_revision_as_nested_hash
+    expected = {"trigger-parameterized-builds" => [
+        {"git-revision" => {"combine-queued-commits" => true}}
+    ]}
+    actual = trigger_parameterized_builds do |builds|
+      builds << build(git_revision: {combine_queued_commits: true})
+    end
+    assert_equal(expected, actual)
+  end
+
   def test_xunit
     expected = {"xunit" =>
                     {"types" =>

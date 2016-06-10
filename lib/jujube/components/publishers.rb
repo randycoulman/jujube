@@ -68,6 +68,31 @@ module Jujube
       # @return [Hash] The specification for the component.
       standard_component :trigger
 
+      # Specify a `trigger-parameterized-builds` publisher for a job.
+      #
+      # See {http://docs.openstack.org/infra/jenkins-job-builder/publishers.html#publishers.trigger-parameterized-builds}.
+      #
+      # `trigger-parameterized-builds` can trigger multiple sets of builds,
+      # each with their own configuration.  Each build specification is added
+      # in a nested configuration block using the {#build} method.
+      #
+      # @example
+      #   job "trigger-parameterized-builds-example" do |j|
+      #     j.publishers << trigger_parameterized_builds do |builds|
+      #       builds << build(project: %w[PROJECT1 PROJECT2], condition: "SUCCESS")
+      #       builds << build(project: "SINGLE_PROJECT", current_parameters: true)
+      #     end
+      #   end
+      #
+      # @yieldparam builds [Array] An array to which nested build specifications
+      #   should be added by the block.
+      # @return [Hash] The specification for the component.
+      def trigger_parameterized_builds
+        builds = []
+        yield(builds) if block_given?
+        {"trigger-parameterized-builds" => builds}
+      end
+
       # Specify an `xunit` publisher for a job.
       #
       # See {http://docs.openstack.org/infra/jenkins-job-builder/publishers.html#publishers.xunit}.
@@ -90,6 +115,38 @@ module Jujube
         to_config("xunit", nested_options(:types, options, &block))
       end
 
+      # @!group trigger_parameterized_builds Builds
+
+      # Configure a `build` for a {#trigger_parameterized_builds} publisher.
+      #
+      # See {http://docs.openstack.org/infra/jenkins-job-builder/publishers.html#publishers.trigger-parameterized-builds}.
+      #
+      # @param options [Hash] The configuration options for the build.
+      # @return [Hash] The specification for the build.
+      def build(options = {})
+        identity = ->(value) { value }
+        transforms = {
+            predefined_parameters: ->(value) do
+              result = value.map { |k,v| "#{k}=#{v}" }.join("\n")
+              value.size > 1 ? result + "\n" : result
+            end,
+            boolean_parameters: ->(value) do
+              Hash[value.map { |k,v| [k.to_s, v] }]
+            end,
+            git_revision: ->(value) do
+              value.is_a?(Hash) ? canonicalize_options(value) : value
+            end
+        }
+        transformed_options = options.map do |k, v|
+          transform = transforms.fetch(k) { identity }
+          [k, transform.call(v)]
+        end
+
+        canonicalize_options(Hash[transformed_options])
+      end
+
+      # @!endgroup
+
       # @!group xunit Test Types
 
       # @!method unittest(options = {})
@@ -101,6 +158,7 @@ module Jujube
       # @return [Hash] The specification for the test type.
       named_config :unittest
 
+      # @!endgroup
     end
   end
 end

@@ -27,6 +27,8 @@
           regex: REGEX
           msg: MESSAGE
     properties:
+      - priority-sorter:
+          priority: 150
       - throttle:
           max-per-node: 2
           max-total: 4
@@ -34,8 +36,6 @@
           categories:
             - CAT1
             - CAT2
-      - priority-sorter:
-          priority: 150
     scm:
       - git:
           url: URL
@@ -111,6 +111,35 @@
           keep-long-stdio: false
       - trigger:
           project: PROJECT
+      - trigger-parameterized-builds:
+        - project:
+            - PROJECT1
+            - PROJECT2
+          predefined-parameters: |
+            param1=VALUE1
+            param2=VALUE2
+          current-parameters: true
+          node-parameters: false
+          svn-revision: true
+          include-upstream: false
+          git-revision:
+            combine-queued-commits: true
+          boolean-parameters:
+              bool1: true
+              bool2: false
+          condition: FAILED_OR_BETTER
+          property-file: FILE.properties
+          fail-on-missing: true
+          use-matrix-child-files: false
+          only-exact-matrix-child-runs: true
+          file-encoding: UTF-8
+          trigger-with-no-params: false
+          restrict-matrix-project: label=="x86"
+          node-label-name: LABEL_NAME
+          node-label: LABEL
+        - project: SINGLE_PROJECT
+          predefined-parameters: param=VALUE
+          git-revision: true
       - xunit:
           types:
             - unittest:

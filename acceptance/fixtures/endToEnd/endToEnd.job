@@ -15,11 +15,11 @@ job "endToEnd" do |j|
                                     regex: "REGEX",
                                     msg: "MESSAGE")
 
+  j.properties << priority_sorter(priority: 150)
   j.properties << throttle(max_per_node: 2,
                            max_total: 4,
                            option: "category",
                            categories: %w{CAT1 CAT2})
-  j.properties << priority_sorter(priority: 150)
 
   j.scm << git(url: "URL", branches: %w{master dev}, wipe_workspace: false)
   j.scm << store(script: "SCRIPT",
@@ -60,6 +60,29 @@ job "endToEnd" do |j|
   j.publishers << ircbot(notify_start: true)
   j.publishers << junit(results: "RESULTS", keep_long_stdio: false)
   j.publishers << trigger(project: "PROJECT")
+  j.publishers << trigger_parameterized_builds do |builds|
+    builds << build(project: %w[PROJECT1 PROJECT2],
+                    predefined_parameters: { param1: "VALUE1", param2: "VALUE2" },
+                    current_parameters: true,
+                    node_parameters: false,
+                    svn_revision: true,
+                    include_upstream: false,
+                    git_revision: { combine_queued_commits: true },
+                    boolean_parameters: { bool1: true, bool2: false },
+                    condition: "FAILED_OR_BETTER",
+                    property_file: "FILE.properties",
+                    fail_on_missing: true,
+                    use_matrix_child_files: false,
+                    only_exact_matrix_child_runs: true,
+                    file_encoding: "UTF-8",
+                    trigger_with_no_params: false,
+                    restrict_matrix_project: 'label=="x86"',
+                    node_label_name: "LABEL_NAME",
+                    node_label: "LABEL")
+    builds << build(project: "SINGLE_PROJECT",
+                    predefined_parameters: { param: "VALUE" },
+                    git_revision: true)
+  end
   j.publishers << xunit do |types|
     types << unittest(pattern: "PATTERN", deleteoutput: false)
   end
