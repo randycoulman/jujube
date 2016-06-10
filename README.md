@@ -113,7 +113,7 @@ The following sections and components are supported:
 * `wrappers`: (`timeout`, `timestamps`)
 * `builders`: (`shell`)
 * `publishers`: (`archive`, `cppcheck`, `email_ext`, `fitnesse`, `ircbot`, `junit`, 
-  `trigger`, `unittest`, `xunit`)
+  `trigger`, `trigger_parameterized_builds`, `unittest`, `xunit`)
 * `notifications`: None defined yet
 
 See [the end-to-end example job](examples/fixtures/endToEnd/endToEnd.job) for example
