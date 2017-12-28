@@ -6,7 +6,7 @@ module Jujube
     # Load job definitions from one or more files and/or directories.
     #
     # The job definition files are loaded as Ruby files; it is expected that
-    # will make use of the {#job} DSL function, but they can contain other
+    # will make use of the {DSL#job} DSL function, but they can contain other
     # Ruby code as well.
     #
     # @param pathnames [Pathname...] The file or directory names containing

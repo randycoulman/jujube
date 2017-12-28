@@ -25,5 +25,5 @@ EOF
   spec.add_development_dependency "rake", ">= 10.1", "< 12"
   spec.add_development_dependency "minitest", "~> 5.3"
   spec.add_development_dependency "flexmock", "~> 2.0"
-  spec.add_development_dependency "yard", "~>0.8.7"
+  spec.add_development_dependency "yard", "~> 0.9.12"
 end
