@@ -12,7 +12,7 @@ class BuildersTest < Minitest::Test
     result = copyartifact(
       project: 'upstream-project',
       which_build: 'last-successful',
-      target: 'dest_dir'
+      target: 'dest_dir',
       do_not_fingerprint: true
     )
     expected = {
