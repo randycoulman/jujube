@@ -3,11 +3,6 @@ require_relative "../test_helper"
 class BuildersTest < Minitest::Test
   include Jujube::Components
 
-  def test_shell
-    expected = {'shell' => 'COMMAND'}
-    assert_equal(expected, shell('COMMAND'))
-  end
-
   def test_copyartifact
     result = copyartifact(
       project: 'upstream-project',
@@ -24,5 +19,10 @@ class BuildersTest < Minitest::Test
       }
     }
     assert_equal(expected, result)
+  end
+
+  def test_shell
+    expected = {'shell' => 'COMMAND'}
+    assert_equal(expected, shell('COMMAND'))
   end
 end
