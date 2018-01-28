@@ -90,6 +90,11 @@
           fail: true
       - timestamps
     builders:
+      - copyartifact:
+          project: PROJECT
+          filter: FILTER
+          target: TARGET
+          flatten: true
       - shell: COMMAND
     publishers:
       - archive:
