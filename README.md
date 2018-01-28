@@ -111,8 +111,8 @@ The following sections and components are supported:
 * `scm`: (`git`, `store`)
 * `triggers`: (`pollscm`, `pollurl`, `reverse`)
 * `wrappers`: (`timeout`, `timestamps`)
-* `builders`: (`shell`)
-* `publishers`: (`archive`, `cppcheck`, `email_ext`, `fitnesse`, `ircbot`, `junit`, 
+* `builders`: (`copyartifact`, `shell`)
+* `publishers`: (`archive`, `cppcheck`, `email_ext`, `fitnesse`, `ircbot`, `junit`,
   `trigger`, `trigger_parameterized_builds`, `unittest`, `xunit`)
 * `notifications`: None defined yet
 

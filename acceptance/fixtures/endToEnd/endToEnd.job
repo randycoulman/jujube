@@ -51,6 +51,7 @@ job "endToEnd" do |j|
   j.wrappers << timeout(type: 'elastic', elastic_percentage: 150, elastic_default_timeout: 5, fail: true)
   j.wrappers << timestamps
 
+  j.builders << copyartifact(project: "PROJECT", filter: "FILTER", target: "TARGET", flatten: true)
   j.builders << shell("COMMAND")
 
   j.publishers << archive(artifacts: "ARTIFACTS", latest_only: true, allow_empty: true)
