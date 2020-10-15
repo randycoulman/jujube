@@ -40,6 +40,11 @@ class JobTest < Minitest::Test
     assert_yaml_matches("quiet-period: 42")
   end
 
+  def test_includes_concurrent
+    @job.concurrent = true
+    assert_yaml_matches("concurrent: true")
+  end
+
   def test_includes_disabled
     @job.disabled = true
     assert_yaml_matches("disabled: true")

@@ -5,6 +5,11 @@ adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
 
+### Added
+
+* Support the `concurrent` job attribute
+(see https://docs.openstack.org/infra/jenkins-job-builder/definition.html?highlight=concurrent).
+
 ## [0.13.0][0.13.0]
 
 ### Added

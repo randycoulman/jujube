@@ -4,6 +4,7 @@ job "endToEnd" do |j|
   j.block_upstream = true
   j.block_downstream = false
   j.quiet_period = 42
+  j.concurrent = true
   j.disabled = true
 
   j.axes << slave(:arch, %w{i386 amd64})

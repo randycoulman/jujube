@@ -6,7 +6,7 @@
 ![Maintenance Status](https://img.shields.io/badge/maintenance-active-green.svg)
 
 **Jujube** is a Ruby front-end for
-[jenkins-job-builder](https://github.com/openstack-infra/jenkins-job-builder).
+[jenkins-job-builder](https://opendev.org/jjb/jenkins-job-builder).
 
 jenkins-job-builder allows you to specify Jenkins jobs in YAML and then creates or
 updates the jobs in a running Jenkins instance.  It provides some tools for removing
@@ -101,6 +101,7 @@ The following job attributes are supported:
 * `block_upstream`
 * `block_downstream`
 * `quiet_period`
+* `concurrent`
 * `disabled`
 
 The following sections and components are supported:
@@ -116,7 +117,7 @@ The following sections and components are supported:
   `trigger`, `trigger_parameterized_builds`, `unittest`, `xunit`)
 * `notifications`: None defined yet
 
-See [the end-to-end example job](examples/fixtures/endToEnd/endToEnd.job) for example
+See [the end-to-end example job](acceptance/fixtures/endToEnd/endToEnd.job) for example
 uses of all of the supported attributes, sections, and components.
 
 In general, component options are typically specified as standard Ruby hashes.  The option
