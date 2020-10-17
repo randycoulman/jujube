@@ -27,7 +27,7 @@ module Jujube
     # @!attribute name
     #   The name of the job - will be the name as seen in Jenkins.
     #
-    #   See {http://docs.openstack.org/infra/jenkins-job-builder/general.html}.
+    #   See {http://docs.openstack.org/infra/jenkins-job-builder/definition.html}.
     #
     #   @return [String]
     attribute :name
@@ -36,7 +36,7 @@ module Jujube
     #   The type of job. This normally does not need to be specified, as it
     #   will be inferred as `matrix` if any `axes` are added.
     #
-    #   See {http://docs.openstack.org/infra/jenkins-job-builder/general.html}.
+    #   See {http://docs.openstack.org/infra/jenkins-job-builder/definition.html}.
     #
     #   @return [String]
     attribute :project_type
@@ -44,7 +44,7 @@ module Jujube
     # @!attribute description
     #   The description of the job.
     #
-    #   See {http://docs.openstack.org/infra/jenkins-job-builder/general.html}.
+    #   See {http://docs.openstack.org/infra/jenkins-job-builder/definition.html}.
     #
     #   @return [String]
     attribute :description
@@ -52,7 +52,7 @@ module Jujube
     # @!attribute node
     #   The Jenkins node or named group where the job should be run.
     #
-    #   See {http://docs.openstack.org/infra/jenkins-job-builder/general.html}.
+    #   See {http://docs.openstack.org/infra/jenkins-job-builder/definition.html}.
     #
     #   @return [String]
     attribute :node
@@ -60,7 +60,7 @@ module Jujube
     # @!attribute block_upstream
     #   `true` if this job should block while upstream jobs are running.
     #
-    #   See {http://docs.openstack.org/infra/jenkins-job-builder/general.html}.
+    #   See {http://docs.openstack.org/infra/jenkins-job-builder/definition.html}.
     #
     #   @return [Boolean]
     attribute :block_upstream
@@ -68,7 +68,7 @@ module Jujube
     # @!attribute block_downstream
     #   `true` if this job should block while downstream jobs are running.
     #
-    #   See {http://docs.openstack.org/infra/jenkins-job-builder/general.html}.
+    #   See {http://docs.openstack.org/infra/jenkins-job-builder/definition.html}.
     #
     #   @return [Boolean]
     attribute :block_downstream
@@ -76,15 +76,23 @@ module Jujube
     # @!attribute quiet_period
     #   Number of seconds to wait between consecutive runs of the job.
     #
-    #   See {http://docs.openstack.org/infra/jenkins-job-builder/general.html}.
+    #   See {http://docs.openstack.org/infra/jenkins-job-builder/definition.html}.
     #
     #   @return [Fixnum]
     attribute :quiet_period
 
+    # @!attribute concurrent
+    #   `true` if this job should be concurrent.
+    #
+    #   See {https://docs.openstack.org/infra/jenkins-job-builder/definition.html?highlight=concurrent}.
+    #
+    #   @return [Boolean]
+    attribute :concurrent
+
     # @!attribute disabled
     #   `true` if this job should be disabled.
     #
-    #   See {http://docs.openstack.org/infra/jenkins-job-builder/general.html}.
+    #   See {http://docs.openstack.org/infra/jenkins-job-builder/definition.html}.
     #
     #   @return [Boolean]
     attribute :disabled
