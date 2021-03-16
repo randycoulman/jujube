@@ -3,6 +3,22 @@ require_relative "../test_helper"
 class TriggersTest < Minitest::Test
   include Jujube::Components
 
+  def test_gitlab
+    expected = {
+      "gitlab" => {
+        "trigger-note" => false,
+        "target-branch-regex" => "branches.*",
+        "include-branches" => ["b1", "b2"]
+      }
+    }
+    actual = gitlab(
+      trigger_note: false,
+      target_branch_regex: "branches.*",
+      include_branches: %w{b1 b2}
+    )
+    assert_equal(expected, actual)
+  end
+
   def test_pollscm
     expected = {
       "pollscm" => {

@@ -5,6 +5,15 @@ module Jujube
     module Triggers
       extend Macros
 
+      # @!method gitlab(options = {})
+      # Specify a `gitlab` trigger for a job.
+      #
+      # See {https://docs.openstack.org/infra/jenkins-job-builder/triggers.html#triggers.gitlab}.
+      #
+      # @param options [Hash] The configuration options for the component.
+      # @return [Hash] The specification for the component.
+      standard_component :gitlab
+
       # @!method pollscm(options = {})
       # Specify a `pollscm` trigger for a job.
       #
