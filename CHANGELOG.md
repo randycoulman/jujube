@@ -5,6 +5,14 @@ adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
 
+## [0.15.0][0.15.0]
+
+### Added
+
+- Support the `gitlab` trigger (see https://docs.openstack.org/infra/jenkins-job-builder/triggers.html#triggers.gitlab) ([#18](https://github.com/randycoulman/jujube/pull/18)) (with @halverneus)
+
+- Support the `gitlab-notifier` publisher (see https://docs.openstack.org/infra/jenkins-job-builder/publishers.html#publishers.gitlab-notifier) ([#19](https://github.com/randycoulman/jujube/pull/19)) (with @halverneus)
+
 ## [0.14.0][0.14.0]
 
 ### Added
@@ -92,7 +100,8 @@ adheres to [Semantic Versioning](http://semver.org/).
 
 - Initial public release.
 
-[unreleased]: https://github.com/randycoulman/jujube/compare/v0.14.0...HEAD
+[unreleased]: https://github.com/randycoulman/jujube/compare/v0.15.0...HEAD
+[0.15.0]: https://github.com/randycoulman/jujube/compare/v0.14.0...v0.15.0
 [0.14.0]: https://github.com/randycoulman/jujube/compare/v0.13.0...v0.14.0
 [0.13.0]: https://github.com/randycoulman/jujube/compare/v0.12.0...v0.13.0
 [0.12.0]: https://github.com/randycoulman/jujube/compare/v0.11.0...v0.12.0
