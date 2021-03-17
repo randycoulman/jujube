@@ -54,6 +54,31 @@
             - package: PACKAGE
             - bundle: BUNDLE
     triggers:
+      - gitlab:
+          trigger-push: true
+          trigger-merge-request: false
+          trigger-accepted-merge-request: true
+          trigger-closed-merge-request: false
+          trigger-open-merge-request-push: source
+          trigger-note: true
+          note-regex: plz build
+          ci-skip: false
+          wip-skip: true
+          set-build-description: false
+          add-note-merge-request: true
+          add-vote-merge-request: false
+          accept-merge-request-on-success: true
+          add-ci-message: false
+          allow-all-branches: true
+          branch-filter-type: All
+          include-branches:
+            - branch1
+            - branch2
+          exclude-branches:
+            - branch3
+            - branch4
+          target-branch-regex: "branch.*"
+          secret-token: s3kr3t
       - pollscm:
           cron: INTERVAL
           ignore-post-commit-hooks: true
@@ -72,14 +97,14 @@
               check-content:
                 - simple: true
                 - json:
-                  - JSON_PATH1
-                  - JSON_PATH2
+                    - JSON_PATH1
+                    - JSON_PATH2
                 - xml:
-                  - XPATH1
-                  - XPATH2
+                    - XPATH1
+                    - XPATH2
                 - text:
-                  - REGEX1
-                  - REGEX2
+                    - REGEX1
+                    - REGEX2
       - reverse:
           jobs: "PROJECT1, PROJECT2"
           result: unstable
@@ -118,34 +143,34 @@
       - trigger:
           project: PROJECT
       - trigger-parameterized-builds:
-        - project:
-            - PROJECT1
-            - PROJECT2
-          predefined-parameters: |
-            param1=VALUE1
-            param2=VALUE2
-          current-parameters: true
-          node-parameters: false
-          svn-revision: true
-          include-upstream: false
-          git-revision:
-            combine-queued-commits: true
-          boolean-parameters:
+          - project:
+              - PROJECT1
+              - PROJECT2
+            predefined-parameters: |
+              param1=VALUE1
+              param2=VALUE2
+            current-parameters: true
+            node-parameters: false
+            svn-revision: true
+            include-upstream: false
+            git-revision:
+              combine-queued-commits: true
+            boolean-parameters:
               bool1: true
               bool2: false
-          condition: FAILED_OR_BETTER
-          property-file: FILE.properties
-          fail-on-missing: true
-          use-matrix-child-files: false
-          only-exact-matrix-child-runs: true
-          file-encoding: UTF-8
-          trigger-with-no-params: false
-          restrict-matrix-project: label=="x86"
-          node-label-name: LABEL_NAME
-          node-label: LABEL
-        - project: SINGLE_PROJECT
-          predefined-parameters: param=VALUE
-          git-revision: true
+            condition: FAILED_OR_BETTER
+            property-file: FILE.properties
+            fail-on-missing: true
+            use-matrix-child-files: false
+            only-exact-matrix-child-runs: true
+            file-encoding: UTF-8
+            trigger-with-no-params: false
+            restrict-matrix-project: label=="x86"
+            node-label-name: LABEL_NAME
+            node-label: LABEL
+          - project: SINGLE_PROJECT
+            predefined-parameters: param=VALUE
+            git-revision: true
       - xunit:
           types:
             - unittest:

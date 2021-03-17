@@ -31,6 +31,28 @@ job "endToEnd" do |j|
     pundles << package("PACKAGE") << bundle("BUNDLE")
   end
 
+  j.triggers << gitlab(
+    trigger_push: true,
+    trigger_merge_request: false,
+    trigger_accepted_merge_request: true,
+    trigger_closed_merge_request: false,
+    trigger_open_merge_request_push: "source",
+    trigger_note: true,
+    note_regex: "plz build",
+    ci_skip: false,
+    wip_skip: true,
+    set_build_description: false,
+    add_note_merge_request: true,
+    add_vote_merge_request: false,
+    accept_merge_request_on_success: true,
+    add_ci_message: false,
+    allow_all_branches: true,
+    branch_filter_type: "All",
+    include_branches: %w{branch1 branch2},
+    exclude_branches: %w{branch3 branch4},
+    target_branch_regex: "branch.*",
+    secret_token: "s3kr3t"
+  )
   j.triggers << pollscm(cron: "INTERVAL", ignore_post_commit_hooks: true)
   j.triggers << pollurl(cron: "CRON", polling_node: "NODE") do |urls|
     urls << url("URL",
