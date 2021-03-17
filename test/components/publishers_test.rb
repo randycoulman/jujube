@@ -27,6 +27,11 @@ class PublishersTest < Minitest::Test
     assert_equal(expected, fitnesse(results: "RESULTS"))
   end
 
+  def test_gitlab_notifier
+    expected = {"gitlab-notifier" => {"name" => "NAME"}}
+    assert_equal(expected, gitlab_notifier(name: "NAME"))
+  end
+
   def test_ircbot
     expected = {"ircbot" => {"notify-start" => true}}
     assert_equal(expected, ircbot(notify_start: true))
