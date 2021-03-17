@@ -81,6 +81,7 @@ job "endToEnd" do |j|
   j.publishers << cppcheck(pattern: "PATTERN")
   j.publishers << email_ext(recipients: %w{fred barney})
   j.publishers << fitnesse(results: "FITNESSE_RESULTS")
+  j.publishers << gitlab_notifier(name: "GITLAB", mark_unstable_as_success: true)
   j.publishers << ircbot(notify_start: true)
   j.publishers << junit(results: "RESULTS", keep_long_stdio: false)
   j.publishers << trigger(project: "PROJECT")

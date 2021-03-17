@@ -41,6 +41,15 @@ module Jujube
       # @return [Hash] The specification for the component.
       standard_component :fitnesse
 
+      # @!method gitlab_notifier(options = {})
+      # Specify a `gitlab-notifier` publisher for a job.
+      #
+      # See {https://docs.openstack.org/infra/jenkins-job-builder/publishers.html#publishers.gitlab-notifier}.
+      #
+      # @param options [Hash] The configuration options for the component.
+      # @return [Hash] The specification for the component.
+      standard_component :gitlab_notifier
+
       # @!method ircbot(options = {})
       # Specify an `ircbot` publisher for a job.
       #

@@ -135,6 +135,9 @@
             - barney
       - fitnesse:
           results: FITNESSE_RESULTS
+      - gitlab-notifier:
+          name: GITLAB
+          mark-unstable-as-success: true
       - ircbot:
           notify-start: true
       - junit:
