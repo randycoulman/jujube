@@ -168,6 +168,17 @@ module Jujube
       named_config :unittest
 
       # @!endgroup
+
+      # @!method gtest(options = {})
+      # Configure a `gtest` test type for an {#xunit} publisher.
+      #
+      # See {https://jenkins-job-builder.readthedocs.io/en/latest/publishers.html#publishers.xunit}.
+      #
+      # @param options [Hash] The configuration options for the test type.
+      # @return [Hash] The specification for the test type.
+      named_config :gtest
+
+      # @!endgroup
     end
   end
 end

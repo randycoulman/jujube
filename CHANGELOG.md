@@ -5,6 +5,10 @@ adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased][unreleased]
 
+### Added
+
+- Support the `gtest` test result type in the `xunit` publisher.
+
 ## [0.15.0][0.15.0]
 
 ### Added

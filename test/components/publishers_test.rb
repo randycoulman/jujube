@@ -109,12 +109,15 @@ class PublishersTest < Minitest::Test
 
   def test_xunit
     expected = {"xunit" =>
-                    {"types" =>
-                         [{"unittest" => {"pattern" => "PATTERN", "deleteoutput" => false}}]
+                    {"types" => [
+                        {"unittest" => {"pattern" => "PATTERN", "deleteoutput" => false}},
+                        {"gtest" => {"pattern" => "PATTERN", "deleteoutput" => false}}
+                      ]
                     }
     }
     actual = xunit do |types|
       types << unittest(pattern: "PATTERN", deleteoutput: false)
+      types << gtest(pattern: "PATTERN", deleteoutput: false)
     end
     assert_equal(expected, actual)
   end
