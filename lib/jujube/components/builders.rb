@@ -8,7 +8,7 @@ module Jujube
       # @!method copyartifact(options = {})
       # Specify a `copyartifact` builder for a job. Requires the `copyartifact` plugin.
       #
-      # See {https://docs.openstack.org/infra/jenkins-job-builder/builders.html#builders.copyartifact}.
+      # See {https://jenkins-job-builder.readthedocs.io/en/latest/builders.html#builders.copyartifact}.
       #
       # @param options [Hash] The configuration options for the component.
       # @return [Hash] The specification for the component.
@@ -16,7 +16,7 @@ module Jujube
 
       # Specify a `shell` builder for a job.
       #
-      # See {http://docs.openstack.org/infra/jenkins-job-builder/builders.html#builders.shell}.
+      # See {https://jenkins-job-builder.readthedocs.io/en/latest/builders.html#builders.shell}.
       #
       # @param command [String] The shell command to execute.
       # @return [Hash] The specification for the component.

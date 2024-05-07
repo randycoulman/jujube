@@ -122,7 +122,7 @@ uses of all of the supported attributes, sections, and components.
 
 In general, component options are typically specified as standard Ruby hashes.  The option
 names are the same as in the
-[jenkins-job-builder documentation](http://docs.openstack.org/infra/jenkins-job-builder/),
+[jenkins-job-builder documentation](https://jenkins-job-builder.readthedocs.io/en/latest/),
 except that you need to use underscores (`_`) instead of dashes (`-`) in the option names.
 
 ### Helper Methods

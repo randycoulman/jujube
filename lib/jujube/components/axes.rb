@@ -7,7 +7,7 @@ module Jujube
 
       # Specify a `label-expression` axis for a matrix job.
       #
-      # See {http://docs.openstack.org/infra/jenkins-job-builder/project_matrix.html}.
+      # See {https://jenkins-job-builder.readthedocs.io/en/latest/project_matrix.html}.
       #
       # @param name [Symbol, String] The name of the axis.
       # @param values [Array<String>] The values of the axis.
@@ -18,7 +18,7 @@ module Jujube
 
       # Specify a `slave` axis for a matrix job.
       #
-      # See {http://docs.openstack.org/infra/jenkins-job-builder/project_matrix.html}.
+      # See {https://jenkins-job-builder.readthedocs.io/en/latest/project_matrix.html}.
       #
       # @param name [Symbol, String] The name of the axis.
       # @param values [Array<String>] The values of the axis.
@@ -31,7 +31,7 @@ module Jujube
 
       # Specify an axis for a matrix job.
       #
-      # See {http://docs.openstack.org/infra/jenkins-job-builder/project_matrix.html}.
+      # See {https://jenkins-job-builder.readthedocs.io/en/latest/project_matrix.html}.
       #
       # @param name [Symbol, String] The name of the axis.
       # @param values [Array<String>] The values of the axis.

@@ -8,7 +8,7 @@ module Jujube
       # @!method priority_sorter(options = {})
       # Specify a `priority-sorter` property for a job.
       #
-      # See {http://docs.openstack.org/infra/jenkins-job-builder/properties.html#properties.priority-sorter}.
+      # See {https://jenkins-job-builder.readthedocs.io/en/latest/properties.html#properties.priority-sorter}.
       #
       # @param options [Hash] The configuration options for the component.
       # @return [Hash] The specification for the component.
@@ -17,7 +17,7 @@ module Jujube
       # @!method throttle(options = {})
       # Specify a `throttle` property for a job.
       #
-      # See {http://docs.openstack.org/infra/jenkins-job-builder/properties.html#properties.throttle}.
+      # See {https://jenkins-job-builder.readthedocs.io/en/latest/properties.html#properties.throttle}.
       #
       # @param options [Hash] The configuration options for the component.
       # @return [Hash] The specification for the component.
@@ -25,4 +25,3 @@ module Jujube
     end
   end
 end
-

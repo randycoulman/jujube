@@ -14,37 +14,37 @@ adheres to [Semantic Versioning](http://semver.org/).
 
 ### Added
 
-- Support the `gitlab` trigger (see https://docs.openstack.org/infra/jenkins-job-builder/triggers.html#triggers.gitlab) ([#18](https://github.com/randycoulman/jujube/pull/18)) (with @halverneus)
+- Support the `gitlab` trigger (see https://jenkins-job-builder.readthedocs.io/en/latest/triggers.html#triggers.gitlab) ([#18](https://github.com/randycoulman/jujube/pull/18)) (with @halverneus)
 
-- Support the `gitlab-notifier` publisher (see https://docs.openstack.org/infra/jenkins-job-builder/publishers.html#publishers.gitlab-notifier) ([#19](https://github.com/randycoulman/jujube/pull/19)) (with @halverneus)
+- Support the `gitlab-notifier` publisher (see https://jenkins-job-builder.readthedocs.io/en/latest/publishers.html#publishers.gitlab-notifier) ([#19](https://github.com/randycoulman/jujube/pull/19)) (with @halverneus)
 
 ## [0.14.0][0.14.0]
 
 ### Added
 
 - Support the `concurrent` job attribute
-  (see https://docs.openstack.org/infra/jenkins-job-builder/definition.html?highlight=concurrent) ([#13](https://github.com/randycoulman/jujube/pull/11)) (@mroelandts)
+  (see https://jenkins-job-builder.readthedocs.io/en/latest/definition.html?highlight=concurrent) ([#13](https://github.com/randycoulman/jujube/pull/11)) (@mroelandts)
 
 ## [0.13.0][0.13.0]
 
 ### Added
 
-- Support the `copyartifact` builder (see https://docs.openstack.org/infra/jenkins-job-builder/builders.html#builders.copyartifact) ([#11](https://github.com/randycoulman/jujube/pull/11)) (@ktreis)
+- Support the `copyartifact` builder (see https://jenkins-job-builder.readthedocs.io/en/latest/builders.html#builders.copyartifact) ([#11](https://github.com/randycoulman/jujube/pull/11)) (@ktreis)
 
 ## [0.12.0][0.12.0]
 
 ### Added
 
-- Support the `string` parameter (see http://docs.openstack.org/infra/jenkins-job-builder/parameters.html#parameters.string) ([#3](https://github.com/randycoulman/jujube/pull/3)) (@jgeysens)
+- Support the `string` parameter (see https://jenkins-job-builder.readthedocs.io/en/latest/parameters.html#parameters.string) ([#3](https://github.com/randycoulman/jujube/pull/3)) (@jgeysens)
 - Support Rake 11.x versions ([#4](https://github.com/randycoulman/jujube/pull/4))
-- Support the `validating_string` parameter (see http://docs.openstack.org/infra/jenkins-job-builder/parameters.html#parameters.validating-string) ([#7](https://github.com/randycoulman/jujube/pull/7))
-- Support the `trigger_parameterized_builds` publisher (see http://docs.openstack.org/infra/jenkins-job-builder/publishers.html#publishers.trigger-parameterized-builds) ([#9](https://github.com/randycoulman/jujube/pull/9))
+- Support the `validating_string` parameter (see https://jenkins-job-builder.readthedocs.io/en/latest/parameters.html#parameters.validating-string) ([#7](https://github.com/randycoulman/jujube/pull/7))
+- Support the `trigger_parameterized_builds` publisher (see https://jenkins-job-builder.readthedocs.io/en/latest/publishers.html#publishers.trigger-parameterized-builds) ([#9](https://github.com/randycoulman/jujube/pull/9))
 
 ## [0.11.0][0.11.0]
 
 ### Breaking Changes
 
-- The `pollscm` component has been updated to conform to the new API in jenkins-job-builder 1.3.0 and later. See http://docs.openstack.org/infra/jenkins-job-builder/triggers.html#triggers.pollscm for details of the change. If you need to use the `pollscm` component and older versions of jenkins-job-builder, then stick with version 0.10.0 or earlier of Jujube.
+- The `pollscm` component has been updated to conform to the new API in jenkins-job-builder 1.3.0 and later. See https://jenkins-job-builder.readthedocs.io/en/latest/triggers.html#triggers.pollscm for details of the change. If you need to use the `pollscm` component and older versions of jenkins-job-builder, then stick with version 0.10.0 or earlier of Jujube.
 
 - With this release, we are no longer officially supporting Ruby versions less than 2.1. Previous versions of Ruby are [considered end-of-life (EOL)](https://www.ruby-lang.org/en/downloads/) by the Ruby core team.
 
@@ -60,7 +60,7 @@ adheres to [Semantic Versioning](http://semver.org/).
 
 ### Added
 
-- Support the `priority_sorter` property (see http://docs.openstack.org/infra/jenkins-job-builder/properties.html#properties.priority-sorter).
+- Support the `priority_sorter` property (see https://jenkins-job-builder.readthedocs.io/en/latest/properties.html#properties.priority-sorter).
 - Links to documentation for the `fitnesse` publisher and `store` SCM that have now been merged into jenkins-job-builder.
 - This CHANGELOG.
 
@@ -69,17 +69,17 @@ adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 
 - Support the `disabled` job attribute
-  (see http://docs.openstack.org/infra/jenkins-job-builder/general.html).
+  (see https://jenkins-job-builder.readthedocs.io/en/latest/general.html).
 
 ## [0.8.0][0.8.0] - 2014-10-29
 
-- Support the `throttle` job property (see http://docs.openstack.org/infra/jenkins-job-builder/properties.html#properties.throttle).
+- Support the `throttle` job property (see https://jenkins-job-builder.readthedocs.io/en/latest/properties.html#properties.throttle).
 
 ## [0.7.0][0.7.0] - 2014-10-28
 
 ### Added
 
-- Support the `reverse` trigger (see http://docs.openstack.org/infra/jenkins-job-builder/triggers.html#triggers.reverse).
+- Support the `reverse` trigger (see https://jenkins-job-builder.readthedocs.io/en/latest/triggers.html#triggers.reverse).
 
 ## [0.6.0][0.6.0] - 2014-08-25
 
@@ -91,13 +91,13 @@ adheres to [Semantic Versioning](http://semver.org/).
 
 ### Added
 
-- Support the `fitnesse` publisher (see http://docs.openstack.org/infra/jenkins-job-builder/publishers.html#publishers.fitnesse).
+- Support the `fitnesse` publisher (see https://jenkins-job-builder.readthedocs.io/en/latest/publishers.html#publishers.fitnesse).
 
 ## [0.5.1][0.5.1] - 2014-04-07
 
 ### Added
 
-- Support the `store` SCM (see http://docs.openstack.org/infra/jenkins-job-builder/scm.html#scm.store).
+- Support the `store` SCM (see https://jenkins-job-builder.readthedocs.io/en/latest/scm.html#scm.store).
 
 ## [0.5.0][0.5.0] - 2014-03-28
 

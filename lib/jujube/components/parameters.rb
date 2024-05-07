@@ -8,7 +8,7 @@ module Jujube
       # @!method string(options = {})
       # Specify a `string` parameter for a job.
       #
-      # See {http://docs.openstack.org/infra/jenkins-job-builder/parameters.html#parameters.string}.
+      # See {https://jenkins-job-builder.readthedocs.io/en/latest/parameters.html#parameters.string}.
       #
       # @param options [Hash] The configuration options for the component.
       # @return [Hash] The specification for the component.
@@ -17,7 +17,7 @@ module Jujube
       # @!method validating_string(options = {})
       # Specify a `validating-string` parameter for a job.
       #
-      # See {http://docs.openstack.org/infra/jenkins-job-builder/parameters.html#parameters.validating-string}.
+      # See {https://jenkins-job-builder.readthedocs.io/en/latest/parameters.html#parameters.validating-string}.
       #
       # @param options [Hash] The configuration options for the component.
       # @return [Hash] The specification for the component.

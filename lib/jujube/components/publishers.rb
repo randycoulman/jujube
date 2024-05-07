@@ -8,7 +8,7 @@ module Jujube
       # @!method archive(options = {})
       # Specify an `archive` publisher for a job.
       #
-      # See {http://docs.openstack.org/infra/jenkins-job-builder/publishers.html#publishers.archive}.
+      # See {https://jenkins-job-builder.readthedocs.io/en/latest/publishers.html#publishers.archive}.
       #
       # @param options [Hash] The configuration options for the component.
       # @return [Hash] The specification for the component.
@@ -17,7 +17,7 @@ module Jujube
       # @!method cppcheck(options = {})
       # Specify a `cppcheck` publisher for a job.
       #
-      # See {http://docs.openstack.org/infra/jenkins-job-builder/publishers.html#publishers.cppcheck}.
+      # See {https://jenkins-job-builder.readthedocs.io/en/latest/publishers.html#publishers.cppcheck}.
       #
       # @param options [Hash] The configuration options for the component.
       # @return [Hash] The specification for the component.
@@ -26,7 +26,7 @@ module Jujube
       # @!method email_ext(options = {})
       # Specify an `email-ext` publisher for a job.
       #
-      # See {http://docs.openstack.org/infra/jenkins-job-builder/publishers.html#publishers.email-ext}.
+      # See {https://jenkins-job-builder.readthedocs.io/en/latest/publishers.html#publishers.email-ext}.
       #
       # @param options [Hash] The configuration options for the component.
       # @return [Hash] The specification for the component.
@@ -35,7 +35,7 @@ module Jujube
       # @!method fitnesse(options = {})
       # Specify a `fitnesse` publisher for a job.
       #
-      # See {http://docs.openstack.org/infra/jenkins-job-builder/publishers.html#publishers.fitnesse}.
+      # See {https://jenkins-job-builder.readthedocs.io/en/latest/publishers.html#publishers.fitnesse}.
       #
       # @param options [Hash] The configuration options for the component.
       # @return [Hash] The specification for the component.
@@ -44,7 +44,7 @@ module Jujube
       # @!method gitlab_notifier(options = {})
       # Specify a `gitlab-notifier` publisher for a job.
       #
-      # See {https://docs.openstack.org/infra/jenkins-job-builder/publishers.html#publishers.gitlab-notifier}.
+      # See {https://jenkins-job-builder.readthedocs.io/en/latest/publishers.html#publishers.gitlab-notifier}.
       #
       # @param options [Hash] The configuration options for the component.
       # @return [Hash] The specification for the component.
@@ -53,7 +53,7 @@ module Jujube
       # @!method ircbot(options = {})
       # Specify an `ircbot` publisher for a job.
       #
-      # See {http://docs.openstack.org/infra/jenkins-job-builder/publishers.html#publishers.ircbot}.
+      # See {https://jenkins-job-builder.readthedocs.io/en/latest/publishers.html#publishers.ircbot}.
       #
       # @param options [Hash] The configuration options for the component.
       # @return [Hash] The specification for the component.
@@ -62,7 +62,7 @@ module Jujube
       # @!method junit(options = {})
       # Specify a `junit` publisher for a job.
       #
-      # See {http://docs.openstack.org/infra/jenkins-job-builder/publishers.html#publishers.junit}.
+      # See {https://jenkins-job-builder.readthedocs.io/en/latest/publishers.html#publishers.junit}.
       #
       # @param options [Hash] The configuration options for the component.
       # @return [Hash] The specification for the component.
@@ -71,7 +71,7 @@ module Jujube
       # @!method trigger(options = {})
       # Specify a `trigger` publisher for a job.
       #
-      # See {http://docs.openstack.org/infra/jenkins-job-builder/publishers.html#publishers.trigger}.
+      # See {https://jenkins-job-builder.readthedocs.io/en/latest/publishers.html#publishers.trigger}.
       #
       # @param options [Hash] The configuration options for the component.
       # @return [Hash] The specification for the component.
@@ -79,7 +79,7 @@ module Jujube
 
       # Specify a `trigger-parameterized-builds` publisher for a job.
       #
-      # See {http://docs.openstack.org/infra/jenkins-job-builder/publishers.html#publishers.trigger-parameterized-builds}.
+      # See {https://jenkins-job-builder.readthedocs.io/en/latest/publishers.html#publishers.trigger-parameterized-builds}.
       #
       # `trigger-parameterized-builds` can trigger multiple sets of builds,
       # each with their own configuration.  Each build specification is added
@@ -104,7 +104,7 @@ module Jujube
 
       # Specify an `xunit` publisher for a job.
       #
-      # See {http://docs.openstack.org/infra/jenkins-job-builder/publishers.html#publishers.xunit}.
+      # See {https://jenkins-job-builder.readthedocs.io/en/latest/publishers.html#publishers.xunit}.
       #
       # `xunit` can publish multiple sets of test results.  The specification for each set
       # of test results is added in a nested configuration block using the {#unittest} method.
@@ -128,7 +128,7 @@ module Jujube
 
       # Configure a `build` for a {#trigger_parameterized_builds} publisher.
       #
-      # See {http://docs.openstack.org/infra/jenkins-job-builder/publishers.html#publishers.trigger-parameterized-builds}.
+      # See {https://jenkins-job-builder.readthedocs.io/en/latest/publishers.html#publishers.trigger-parameterized-builds}.
       #
       # @param options [Hash] The configuration options for the build.
       # @return [Hash] The specification for the build.
@@ -170,7 +170,7 @@ module Jujube
       # @!method unittest(options = {})
       # Configure a `unittest` test type for an {#xunit} publisher.
       #
-      # See {http://docs.openstack.org/infra/jenkins-job-builder/publishers.html#publishers.xunit}.
+      # See {https://jenkins-job-builder.readthedocs.io/en/latest/publishers.html#publishers.xunit}.
       #
       # @param options [Hash] The configuration options for the test type.
       # @return [Hash] The specification for the test type.

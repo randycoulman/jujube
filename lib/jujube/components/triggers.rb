@@ -8,7 +8,7 @@ module Jujube
       # @!method gitlab(options = {})
       # Specify a `gitlab` trigger for a job.
       #
-      # See {https://docs.openstack.org/infra/jenkins-job-builder/triggers.html#triggers.gitlab}.
+      # See {https://jenkins-job-builder.readthedocs.io/en/latest/triggers.html#triggers.gitlab}.
       #
       # @param options [Hash] The configuration options for the component.
       # @return [Hash] The specification for the component.
@@ -19,7 +19,7 @@ module Jujube
       #
       # This trigger requires jenkins-job-builder 1.3.0 or later.
       #
-      # See {http://docs.openstack.org/infra/jenkins-job-builder/triggers.html#triggers.pollscm}.
+      # See {https://jenkins-job-builder.readthedocs.io/en/latest/triggers.html#triggers.pollscm}.
       #
       # @param options [Hash] The configuration options for the component.
       # @return [Hash] The specification for the component.
@@ -27,7 +27,7 @@ module Jujube
 
       # Specify a `pollurl` trigger for a job.
       #
-      # See {http://docs.openstack.org/infra/jenkins-job-builder/triggers.html#triggers.pollurl}.
+      # See {https://jenkins-job-builder.readthedocs.io/en/latest/triggers.html#triggers.pollurl}.
       #
       # `pollurl` can poll several URLs.  Each URL specification is added
       # in a nested configuration block using the {#url} method.
@@ -51,7 +51,7 @@ module Jujube
 
       # Specify a `reverse` trigger for a job.
       #
-      # See {http://docs.openstack.org/infra/jenkins-job-builder/triggers.html#triggers.reverse}.
+      # See {https://jenkins-job-builder.readthedocs.io/en/latest/triggers.html#triggers.reverse}.
       #
       # @param options [Hash] The reverse project trigger options.
       # @option options [String, Array<String>] :jobs The jobs to watch. Note that
