@@ -18,7 +18,8 @@ class AcceptanceTest < Minitest::Test
 
   def run_jujube(*arguments)
     jujube = bin_directory.join("jujube").to_s
-    @output, @error_output, @status = Open3.capture3(jujube, *arguments)
+    env = {"RUBYLIB" => lib_directory.to_s}
+    @output, @error_output, @status = Open3.capture3(env, jujube, *arguments)
   end
 
   def assert_exits_cleanly
@@ -39,6 +40,10 @@ class AcceptanceTest < Minitest::Test
 
   def bin_directory
     acceptance_root.join("..", "bin")
+  end
+
+  def lib_directory
+    acceptance_root.join("..", "lib")
   end
 
   def acceptance_root
