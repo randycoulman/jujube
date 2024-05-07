@@ -7,7 +7,8 @@ adheres to [Semantic Versioning](http://semver.org/).
 
 ### Added
 
-- Support the `gtest` test result type in the `xunit` publisher.
+- Support the `gtest` test result type in the `xunit` publisher (see
+  https://jenkins-job-builder.readthedocs.io/en/latest/publishers.html#publishers.xunit)  ([#20](https://github.com/randycoulman/jujube/pull/20)) (with @robin-verhoeven)
 
 ## [0.15.0][0.15.0]
 

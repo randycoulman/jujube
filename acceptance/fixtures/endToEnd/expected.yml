@@ -176,6 +176,9 @@
             git-revision: true
       - xunit:
           types:
+            - gtest:
+                pattern: GTEST_PATTERN
+                deleteoutput: false
             - unittest:
-                pattern: PATTERN
+                pattern: UNITTEST_PATTERN
                 deleteoutput: false
