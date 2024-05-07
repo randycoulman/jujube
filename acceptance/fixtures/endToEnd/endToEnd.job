@@ -109,6 +109,7 @@ job "endToEnd" do |j|
                     git_revision: true)
   end
   j.publishers << xunit do |types|
-    types << unittest(pattern: "PATTERN", deleteoutput: false)
+    types << gtest(pattern: "GTEST_PATTERN", deleteoutput: false)
+    types << unittest(pattern: "UNITTEST_PATTERN", deleteoutput: false)
   end
 end

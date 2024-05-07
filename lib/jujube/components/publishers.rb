@@ -158,6 +158,15 @@ module Jujube
 
       # @!group xunit Test Types
 
+      # @!method gtest(options = {})
+      # Configure a `gtest` test type for an {#xunit} publisher.
+      #
+      # See {https://jenkins-job-builder.readthedocs.io/en/latest/publishers.html#publishers.xunit}.
+      #
+      # @param options [Hash] The configuration options for the test type.
+      # @return [Hash] The specification for the test type.
+      named_config :gtest
+
       # @!method unittest(options = {})
       # Configure a `unittest` test type for an {#xunit} publisher.
       #
